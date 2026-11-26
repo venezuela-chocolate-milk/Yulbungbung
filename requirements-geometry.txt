@@ -1,0 +1,2 @@
+# Geometry clipping used by the roundabout road-first terrain layout.
+shapely>=2.1,<3
