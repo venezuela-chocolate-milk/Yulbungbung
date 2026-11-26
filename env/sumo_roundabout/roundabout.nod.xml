@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nodes>
+    <node id="ring0_E_out0" x="19.184" y="5.656" type="priority" />
+    <node id="ring1_E_in1" x="11.307" y="16.497" type="priority" />
+    <node id="ring2_N_out0" x="-3.532" y="19.686" type="priority" />
+    <node id="ring3_N_in1" x="-12.466" y="15.639" type="priority" />
+    <node id="ring4_DANBONG_out0" x="-19.935" y="-1.609" type="priority" />
+    <node id="ring5_W_out0" x="-18.713" y="-7.060" type="priority" />
+    <node id="ring6_W_in1" x="-13.034" y="-15.169" type="priority" />
+    <node id="ring7_S_out0" x="-1.778" y="-19.921" type="priority" />
+    <node id="ring8_S_in1" x="12.064" y="-15.952" type="priority" />
+    <node id="N_end0" x="-62.382" y="162.677" type="dead_end" />
+    <node id="N_out0_mid" x="-19.284" y="56.004" type="priority" />
+    <node id="N_end1" x="-69.614" y="159.755" type="dead_end" />
+    <node id="N_in1_mid" x="-26.516" y="53.082" type="priority" />
+    <node id="DANBONG_out0_split" x="-95.000" y="-1.609" type="priority" />
+    <node id="W_end0" x="-698.258" y="-484.714" type="dead_end" />
+    <node id="W_out0_mid" x="-60.958" y="-38.471" type="priority" />
+    <node id="W_end1" x="-694.300" y="-490.366" type="dead_end" />
+    <node id="W_in1_mid" x="-57.000" y="-44.124" type="priority" />
+    <node id="S_end0" x="41.095" y="-169.436" type="dead_end" />
+    <node id="S_out0_mid" x="7.178" y="-51.153" type="priority" />
+    <node id="S_end1" x="54.937" y="-165.467" type="dead_end" />
+    <node id="S_in1_mid" x="21.020" y="-47.184" type="priority" />
+    <node id="DANBONG_split_in" x="-95.000" y="-9.609" type="priority" />
+    <node id="DANBONG_end_out" x="-195.000" y="-1.609" type="priority" />
+    <node id="DANBONG_end_in" x="-195.000" y="-9.609" type="priority" />
+    <node id="DANBONG_diag_widen" x="-63.696" y="-16.897" type="priority" />
+    <join nodes="W_out0_mid W_in1_mid" />
+    <join nodes="S_out0_mid S_in1_mid" />
+    <join nodes="N_out0_mid N_in1_mid" />
+<node id="T_junction" x="283.1559480312316" y="205.7248383023656" type="traffic_light" /><node id="T_bay" x="234.6255616376781" y="161.93657964216771" type="priority" /><node id="T_main_end" x="404.5084971874737" y="293.8926261462366" type="priority" radius="6.0" /><node id="T_side_end" x="256.1618215099678" y="322.64924607659384" type="priority" /><node id="T_end_bay" x="384.29370559704336" y="270.67685131627525" type="priority" /><node id="T_end_main_end" x="570.356981034338" y="414.38860286619354" type="traffic_light" radius="12.0" /><node id="T_end_side_end" x="345.72997195822643" y="374.79432558373134" type="priority" /><node id="T_stop_junction" x="461.13968679372005" y="335.0375938067097" type="priority" radius="6.0" /><node id="T_stop_side_end" x="519.9182120229674" y="254.13589436921495" type="dead_end" /><node id="X_main_end" x="651.2586804718327" y="473.16712809544083" type="dead_end" /><node id="X_nw_end" x="477.17534435479274" y="455.87574045992517" type="dead_end" /><node id="X_se_end" x="1520.4442569826429" y="-8.617505932638892" type="priority" radius="8" /><node id="X_se_widen" x="1465.6315295240868" y="15.786692651909107" type="priority" radius="0" /><node id="SE_triangle_corner" x="1567.0350753224154" y="-29.361074729504708" type="traffic_light" radius="12" /><node id="SE_triangle_merge" x="1545.071296596322" y="-78.69252944220514" type="priority" radius="8" /><node id="SE_triangle_NE" x="1599.5740067684794" y="43.722561881903346" type="dead_end" radius="0" /><node id="SE_triangle_SW" x="1494.2292162118472" y="-192.88571164753023" type="priority" radius="14" /><node id="SE_triangle_forward" x="1676.6605302395274" y="-78.16947189860076" type="dead_end" radius="0" /><node id="SE_SW_outer_lane_start" x="1538.5635103071095" y="-93.30925676448676" type="priority" radius="2" /><node id="SW_final_forward" x="1433.218719750477" y="-329.9175302939204" type="priority" radius="22" /><node id="SW_final_left" x="1549.0419436704033" y="-217.28991023207828" type="dead_end" /><node id="SW_final_right" x="1439.416488753291" y="-168.48151306298223" type="dead_end" /><node id="SW_end_T_left" x="2008.7523580653155" y="-586.1616154316746" type="priority" radius="0" /><node id="SW_end_T_right" x="1350.999628562643" y="-293.3112324170984" type="dead_end" /><node id="SW_end_T_widen" x="2045.2941763710196" y="-602.4310811547066" type="priority" radius="0" /><node id="SW_end_T_extension" x="2173.1905404409836" y="-659.3742111853187" type="dead_end" radius="0" /><node id="SW_new_cross" x="2106.742595648293" y="-629.7896800838148" type="priority" radius="18" /><node id="SW_slip_start" x="2063.5650855238714" y="-610.5658140162227" type="priority" radius="4" /><node id="SW_new_upper" x="2153.29470321391" y="-572.3026148203204" type="dead_end" /><node id="SW_new_lower" x="2052.6034406459357" y="-696.6459686534356" type="dead_end" /><node id="SW_slip_merge" x="2071.483052377431" y="-673.3315898097266" type="priority" radius="4" /><node id="SW_long_right_start" x="1917.3978123010556" y="-545.4879511240947" type="priority" radius="4" /></nodes>

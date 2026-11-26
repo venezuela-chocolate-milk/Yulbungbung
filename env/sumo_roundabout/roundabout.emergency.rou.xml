@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- env/roundabout_emergency.py 가 생성. 왕길119안전센터 소방차 출동 (마전동 쪽으로, 끝에서 사라짐) -->
+<routes>
+    <vType id="em_fire" vClass="emergency" guiShape="firebrigade" length="9.0" width="2.5" color="220,20,20" accel="1.8" decel="4.5" maxSpeed="22.22" speedFactor="1.3" speedDev="0.05" minGap="2.5">
+        <param key="has.bluelight.device" value="false"/>
+    </vType>
+    <route id="em_route" edges="nw_119 nw_wj3_r nw_wj2_r nw_wj1_r X_nw_in X_se_out X_se_out_s1 X_se_out_s2 X_se_out_s3 X_se_out_s3_int_1 X_se_out_sz X_se_out_b_sz X_se_out_b X_se_out_far SE_triangle_main_out SE_triangle_forward_out S_conn_down S_conn_down_mj_1 S_conn_down_mj_1_pm_1 S_conn_down_mj_1_pm_2 S_conn_down_mj_2 S_conn_down_mj_3 S_conn_down_mj_4 S_conn_down1 SW_end_T_left_in_far SW_end_T_left_in_far_pn_1 SW_end_T_left_in_far_pn_2 SW_end_T_left_out_far SW_end_T_left_out_far2 SW_long_main_continue SW_end_T_taper_out SW_end_T_pocket SW_end_T_extension_out SW_slip_main SW_new_upper_out sg_ext_n sg_ext_n_pd_1 sg_ext_n_pd_2"/>
+    <flow id="em_fire_119" type="em_fire" route="em_route" begin="60" end="100000" period="600" departPos="0" departSpeed="0" departLane="best"/>
+</routes>

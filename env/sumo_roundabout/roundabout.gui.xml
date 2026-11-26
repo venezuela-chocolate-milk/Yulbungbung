@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<viewsettings>
+    <scheme name="geomdan">
+        <background backgroundColor="112,140,96" showGrid="0" />
+        <edges laneEdgeMode="0" laneShowBorders="0" showLinkDecals="0" showLinkRules="0" showRails="1">
+            <colorScheme name="uniform">
+                <entry color="84,84,90" name="road" />
+                <entry color="grey" name="sidewalk" />
+                <entry color="192,66,44" name="bike lane" />
+                <entry color="0,0,0,0" name="green verge" />
+                <entry color="150,200,200" name="waterway" />
+                <entry color="black" name="railway" />
+                <entry color="64,0,64" name="rails on road" />
+                <entry color="92,92,92" name="no passenger" />
+                <entry color="red" name="closed" />
+                <entry color="green" name="connector" />
+                <entry color="orange" name="forbidden" />
+            </colorScheme>
+        </edges>
+        <junctions junctionMode="0" drawShape="1">
+            <colorScheme name="uniform">
+                <entry color="84,84,90" />
+                <entry color="150,200,200" name="waterway" />
+                <entry color="0,0,0,0" name="railway" />
+            </colorScheme>
+        </junctions>
+        <vehicles vehicleMode="0" vehicleQuality="2" />
+    </scheme>
+    <viewport zoom="738.9565217391304" x="2106.742596" y="-629.789680" angle="0" />
+    <delay value="100.0" />
+</viewsettings>

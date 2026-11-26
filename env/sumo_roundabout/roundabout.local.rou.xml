@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- env/roundabout_local_traffic.py 가 생성. 구간 안에서 들어오고 나가는 배경 교통 (traffic_tune.py 가 구간별 배율) -->
+<routes>
+    <flow id="loc_0_0" type="car" from="DANBONG_infar" to="W_in1" via="DANBONG_infar_pu_1" begin="0" end="100000" vehsPerHour="187.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_0_1" type="car" from="DANBONG_infar" to="W_out0_far" via="DANBONG_infar_pu_1" begin="0" end="100000" vehsPerHour="187.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_1_0" type="car" from="E_out0" to="T_main_out" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_1_1" type="car" from="E_out0" to="T_side_out" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_2_0" type="car" from="T_side_in" to="T_end_main_out" via="T_main_out" begin="0" end="100000" vehsPerHour="250.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_3_0" type="car" from="T_side_in" to="T_stop_main_out" via="T_end_main_out" begin="0" end="100000" vehsPerHour="187.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_3_1" type="car" from="T_side_in" to="T_stop_side_out" via="T_end_main_out" begin="0" end="100000" vehsPerHour="187.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_4_0" type="car" from="shop_117_f_pk_1" to="shop_c1_r" begin="0" end="100000" vehsPerHour="25.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_4_1" type="car" from="shop_117_f_pk_1" to="shop_d1a_f" begin="0" end="100000" vehsPerHour="25.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_4_2" type="car" from="shop_117_f_pk_1" to="shop_v1_f" begin="0" end="100000" vehsPerHour="25.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_4r_0" type="car" from="shop_117_r" to="shop_117_r_pk_1" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5_0" type="car" from="shop_d1a_f" to="shop_c2a_r" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5_1" type="car" from="shop_d1a_f" to="shop_c2b_f" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5_2" type="car" from="shop_d1a_f" to="shop_d1b_f" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5r_0" type="car" from="shop_d1a_r" to="shop_117_r" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5r_1" type="car" from="shop_d1a_r" to="shop_c1_r" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_5r_2" type="car" from="shop_d1a_r" to="shop_v1_f" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_6_0" type="car" from="shop_d1b_f" to="shop_c3a_r" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_6_1" type="car" from="shop_d1b_f" to="shop_c3b_f" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_6r_0" type="car" from="shop_d1b_r" to="shop_c2a_r" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_6r_1" type="car" from="shop_d1b_r" to="shop_c2b_f" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_6r_2" type="car" from="shop_d1b_r" to="shop_d1a_r" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_7_0" type="car" from="X_se_out_s2" to="X_se_out_s3_int_1" via="X_se_out_s3" begin="0" end="100000" vehsPerHour="250.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_8_0" type="car" from="int_133_f_bj" to="X_se_out_b_sz" via="X_se_out_s3_int_1" begin="0" end="100000" vehsPerHour="250.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_9_0" type="car" from="X_se_out_sz" to="SE_triangle_main_out" via="X_se_out_b_sz" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_9_1" type="car" from="X_se_out_sz" to="SE_triangle_slip" via="X_se_out_b_sz" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_10r_0" type="car" from="mx_ne_in" to="SE_triangle_cross_out" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_10r_1" type="car" from="mx_ne_in" to="SE_triangle_forward_out" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_10r_2" type="car" from="mx_ne_in" to="SE_triangle_main_in" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_11r_0" type="car" from="mx_ne_in_gd" to="mx_ne_in" begin="0" end="100000" vehsPerHour="225.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_12_0" type="car" from="mx_c_r" to="mx_c_r_mz_1" begin="0" end="100000" vehsPerHour="37.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_12_1" type="car" from="mx_c_r" to="mz_s1a_f" begin="0" end="100000" vehsPerHour="37.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_13_0" type="car" from="mz_s1a_f" to="mz_s1c_f" begin="0" end="100000" vehsPerHour="37.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_13_1" type="car" from="mz_s1a_f" to="mz_x2_r" begin="0" end="100000" vehsPerHour="37.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_13r_0" type="car" from="mz_s1a_r" to="mx_c_r_mz_1" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_14_0" type="car" from="mz_s1c_f" to="S_conn_up_mx_mz_2" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_14r_0" type="car" from="mz_x1_f" to="mz_s1b_r" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_15_0" type="car" from="SE_triangle_forward_in" to="SE_triangle_NE_out" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_15_1" type="car" from="SE_triangle_forward_in" to="SE_triangle_cross_out" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_15_2" type="car" from="SE_triangle_forward_in" to="SE_triangle_main_in" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_15r_0" type="car" from="SE_triangle_forward_out" to="S_conn_down" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_16_0" type="car" from="SE_triangle_slip" to="SW_final_forward_out_up" via="SE_triangle_SW_out" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_16_1" type="car" from="SE_triangle_slip" to="SW_final_left_out" via="SE_triangle_SW_out" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_16_2" type="car" from="SE_triangle_slip" to="SW_final_right_out" via="SE_triangle_SW_out" begin="0" end="100000" vehsPerHour="125.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_17_0" type="car" from="SW_final_left_out" to="mj_b1b_f" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_17r_0" type="car" from="mj_b1_r" to="SE_triangle_SW_in" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_17r_1" type="car" from="mj_b1_r" to="SW_final_forward_out_up" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_17r_2" type="car" from="mj_b1_r" to="SW_final_right_out" begin="0" end="100000" vehsPerHour="50.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_18_0" type="car" from="mj_b1c_f" to="mj_s1b_f" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_18r_0" type="car" from="mj_b1c_r" to="mj_b1b_r" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_19_0" type="car" from="mj_c_f" to="S_conn_down_mj_3" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_19r_0" type="car" from="mj_c_r" to="mj_b1c_r" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_19r_1" type="car" from="mj_c_r" to="mj_s1b_f" begin="0" end="100000" vehsPerHour="75.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_20_0" type="car" from="S_conn_down_mj_4" to="SW_end_T_left_in_far_pn_1" begin="0" end="100000" vehsPerHour="150.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_21_0" type="car" from="SW_end_T_left_in_far2_me_1" to="SW_end_T_left_in_far_pn_1" via="SW_end_T_left_in_far" begin="0" end="100000" vehsPerHour="625.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_22_0" type="car" from="SW_end_T_left_in_far_pn_1" to="SW_end_T_left_in" via="SW_end_T_left_in_far_pn_2" begin="0" end="100000" vehsPerHour="625.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_23_0" type="car" from="SW_end_T_left_out" to="SW_end_T_left_out_far2" via="SW_end_T_left_out_far" begin="0" end="100000" vehsPerHour="500.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_24_0" type="car" from="SW_end_T_left_out" to="SW_end_T_taper_out" via="SW_long_main_continue" begin="0" end="100000" vehsPerHour="500.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_25_0" type="car" from="SW_end_T_left_out" to="SW_new_cross_out" via="SW_end_T_taper_out" begin="0" end="100000" vehsPerHour="250.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_25_1" type="car" from="SW_end_T_left_out" to="SW_new_upper_out" via="SW_end_T_taper_out" begin="0" end="100000" vehsPerHour="250.00" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_26_0" type="car" from="SW_end_T_extension_in" to="sg_ext_n_pd_2" via="sg_ext_n" begin="0" end="100000" vehsPerHour="312.50" departLane="random" departPos="base" departSpeed="max"/>
+    <flow id="loc_26_1" type="car" from="SW_new_lower_in" to="sg_ext_n_pd_2" via="sg_ext_n" begin="0" end="100000" vehsPerHour="312.50" departLane="random" departPos="base" departSpeed="max"/>
+</routes>

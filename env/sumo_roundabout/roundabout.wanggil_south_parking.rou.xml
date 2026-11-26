@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 검단1차풍림아이원·검단원흥아파트 주차장 차 (env/roundabout_wanggil_south_parking.py): 칸에 주차했다가 나간다. -->
+<routes>
+    <vType id="pj_pr_car" carFollowModel="IDM" accel="2.0" decel="4.0" maxSpeed="16.67" speedDev="0.1" vClass="passenger" guiShape="passenger/sedan" length="4.6" color="200,200,205"/>
+    <vType id="pj_wh_car" carFollowModel="IDM" accel="2.0" decel="4.0" maxSpeed="16.67" speedDev="0.1" vClass="passenger" guiShape="passenger/sedan" length="4.6" color="200,200,205"/>
+    <trip id="pj_pr_init_0" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_f" to="nw_hs1_r" color="200,200,205">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="3251"/>
+    </trip>
+    <trip id="pj_pr_init_1" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_f" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="3328"/>
+    </trip>
+    <trip id="pj_pr_init_2" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_f" to="nw_hs4_f" color="245,245,245">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="3596"/>
+    </trip>
+    <trip id="pj_pr_init_3" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_f" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="2971"/>
+    </trip>
+    <trip id="pj_pr_init_4" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_f" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="732"/>
+    </trip>
+    <trip id="pj_pr_init_5" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_r" to="nw_hs1_r" color="110,112,118">
+        <stop parkingArea="pj_pr_pa_a0_r" duration="1736"/>
+    </trip>
+    <trip id="pj_pr_init_6" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_r" to="nw_hs4_f" color="170,172,176">
+        <stop parkingArea="pj_pr_pa_a0_r" duration="2428"/>
+    </trip>
+    <trip id="pj_pr_init_7" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a0_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a0_r" duration="2748"/>
+    </trip>
+    <trip id="pj_pr_init_8" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a1_f" to="nw_hs1_r" color="200,200,205">
+        <stop parkingArea="pj_pr_pa_a1_f" duration="851"/>
+    </trip>
+    <trip id="pj_pr_init_9" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a1_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a1_r" duration="1273"/>
+    </trip>
+    <trip id="pj_pr_init_10" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a1_r" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_pr_pa_a1_r" duration="3461"/>
+    </trip>
+    <trip id="pj_pr_init_11" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a1_r" to="nw_hs4_f" color="245,245,245">
+        <stop parkingArea="pj_pr_pa_a1_r" duration="735"/>
+    </trip>
+    <trip id="pj_pr_init_12" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a1_r" to="nw_hs1_r" color="150,30,35">
+        <stop parkingArea="pj_pr_pa_a1_r" duration="1720"/>
+    </trip>
+    <trip id="pj_pr_init_13" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_f" to="nw_hs1_r" color="150,30,35">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="3335"/>
+    </trip>
+    <trip id="pj_pr_init_14" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_f" to="nw_hs1_r" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="752"/>
+    </trip>
+    <trip id="pj_pr_init_15" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_f" to="nw_hs4_f" color="200,200,205">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="2721"/>
+    </trip>
+    <trip id="pj_pr_init_16" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_f" to="nw_hs1_r" color="200,200,205">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="1637"/>
+    </trip>
+    <trip id="pj_pr_init_17" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_f" to="nw_hs1_r" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="2569"/>
+    </trip>
+    <trip id="pj_pr_init_18" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_r" to="nw_hs4_f" color="235,235,230">
+        <stop parkingArea="pj_pr_pa_a2_r" duration="1455"/>
+    </trip>
+    <trip id="pj_pr_init_19" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_a2_r" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_pr_pa_a2_r" duration="752"/>
+    </trip>
+    <trip id="pj_pr_init_20" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_n0_r" to="nw_hs4_f" color="245,245,245">
+        <stop parkingArea="pj_pr_pa_n0_r" duration="568"/>
+    </trip>
+    <trip id="pj_pr_init_21" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_n0_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_n0_r" duration="1892"/>
+    </trip>
+    <trip id="pj_pr_init_22" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_n0_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_n0_r" duration="720"/>
+    </trip>
+    <trip id="pj_pr_init_23" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_n1_r" to="nw_hs1_r" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_n1_r" duration="418"/>
+    </trip>
+    <trip id="pj_pr_init_24" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_s0_f" to="nw_hs1_r" color="150,30,35">
+        <stop parkingArea="pj_pr_pa_s0_f" duration="558"/>
+    </trip>
+    <trip id="pj_pr_init_25" type="pj_pr_car" depart="0" departPos="stop" from="pj_pr_s0_f" to="nw_hs4_f" color="245,245,245">
+        <stop parkingArea="pj_pr_pa_s0_f" duration="2812"/>
+    </trip>
+    <flow id="pj_pr_f_pj_pr_pa_a0_f" type="pj_pr_car" begin="0" end="100000" probability="0.00200" from="nw_hs1_f" to="nw_hs4_f" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="pj_pr_pa_a0_f" duration="1200"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_a0_r" type="pj_pr_car" begin="0" end="100000" probability="0.00150" from="nw_wg_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="30,30,32">
+        <stop parkingArea="pj_pr_pa_a0_r" duration="2400"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_a1_f" type="pj_pr_car" begin="0" end="100000" probability="0.00056" from="nw_hs4_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="170,172,176">
+        <stop parkingArea="pj_pr_pa_a1_f" duration="3600"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_a1_r" type="pj_pr_car" begin="0" end="100000" probability="0.00042" from="nw_hs1_f" to="nw_hs1_r" departLane="best" departSpeed="max" color="110,112,118">
+        <stop parkingArea="pj_pr_pa_a1_r" duration="4800"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_a2_f" type="pj_pr_car" begin="0" end="100000" probability="0.00300" from="nw_wg_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="35,55,95">
+        <stop parkingArea="pj_pr_pa_a2_f" duration="1200"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_a2_r" type="pj_pr_car" begin="0" end="100000" probability="0.00100" from="nw_hs4_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="150,30,35">
+        <stop parkingArea="pj_pr_pa_a2_r" duration="2400"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_n0_r" type="pj_pr_car" begin="0" end="100000" probability="0.00056" from="nw_hs1_f" to="nw_hs4_f" departLane="best" departSpeed="max" color="235,235,230">
+        <stop parkingArea="pj_pr_pa_n0_r" duration="3600"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_n1_r" type="pj_pr_car" begin="0" end="100000" probability="0.00033" from="nw_wg_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="60,62,66">
+        <stop parkingArea="pj_pr_pa_n1_r" duration="4800"/>
+    </flow>
+    <flow id="pj_pr_f_pj_pr_pa_s0_f" type="pj_pr_car" begin="0" end="100000" probability="0.00167" from="nw_hs4_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="200,200,205">
+        <stop parkingArea="pj_pr_pa_s0_f" duration="1200"/>
+    </flow>
+    <trip id="pj_wh_init_26" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_f" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_a0_f" duration="1974"/>
+    </trip>
+    <trip id="pj_wh_init_27" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_f" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_f" duration="2397"/>
+    </trip>
+    <trip id="pj_wh_init_28" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_f" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_f" duration="1650"/>
+    </trip>
+    <trip id="pj_wh_init_29" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_r" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_r" duration="790"/>
+    </trip>
+    <trip id="pj_wh_init_30" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_r" to="nw_hs4_f" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_r" duration="1086"/>
+    </trip>
+    <trip id="pj_wh_init_31" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_r" to="nw_hs4_f" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_r" duration="958"/>
+    </trip>
+    <trip id="pj_wh_init_32" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a0_r" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a0_r" duration="1894"/>
+    </trip>
+    <trip id="pj_wh_init_33" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_f" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_a1_f" duration="1244"/>
+    </trip>
+    <trip id="pj_wh_init_34" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_f" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_a1_f" duration="1648"/>
+    </trip>
+    <trip id="pj_wh_init_35" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_f" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_a1_f" duration="2462"/>
+    </trip>
+    <trip id="pj_wh_init_36" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_r" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_a1_r" duration="3446"/>
+    </trip>
+    <trip id="pj_wh_init_37" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_r" to="nw_hs4_f" color="110,112,118">
+        <stop parkingArea="pj_wh_pa_a1_r" duration="3477"/>
+    </trip>
+    <trip id="pj_wh_init_38" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_r" to="nw_hs1_r" color="245,245,245">
+        <stop parkingArea="pj_wh_pa_a1_r" duration="2634"/>
+    </trip>
+    <trip id="pj_wh_init_39" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a1_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_a1_r" duration="1061"/>
+    </trip>
+    <trip id="pj_wh_init_40" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs1_r" color="110,112,118">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="1597"/>
+    </trip>
+    <trip id="pj_wh_init_41" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs4_f" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="2095"/>
+    </trip>
+    <trip id="pj_wh_init_42" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs1_r" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="1246"/>
+    </trip>
+    <trip id="pj_wh_init_43" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs1_r" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="514"/>
+    </trip>
+    <trip id="pj_wh_init_44" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs4_f" color="245,245,245">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="1798"/>
+    </trip>
+    <trip id="pj_wh_init_45" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_f" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="1550"/>
+    </trip>
+    <trip id="pj_wh_init_46" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_r" to="nw_hs1_r" color="170,172,176">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="860"/>
+    </trip>
+    <trip id="pj_wh_init_47" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_r" to="nw_hs4_f" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="447"/>
+    </trip>
+    <trip id="pj_wh_init_48" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_r" to="nw_hs4_f" color="200,200,205">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="3248"/>
+    </trip>
+    <trip id="pj_wh_init_49" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_r" to="nw_hs4_f" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="936"/>
+    </trip>
+    <trip id="pj_wh_init_50" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_a2_r" to="nw_hs1_r" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="2306"/>
+    </trip>
+    <trip id="pj_wh_init_51" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_n0_r" to="nw_hs1_r" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_n0_r" duration="362"/>
+    </trip>
+    <trip id="pj_wh_init_52" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_n0_r" to="nw_hs4_f" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_n0_r" duration="630"/>
+    </trip>
+    <trip id="pj_wh_init_53" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_n0_r" to="nw_hs1_r" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_n0_r" duration="1994"/>
+    </trip>
+    <trip id="pj_wh_init_54" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_n1_r" to="nw_hs1_r" color="150,30,35">
+        <stop parkingArea="pj_wh_pa_n1_r" duration="3226"/>
+    </trip>
+    <trip id="pj_wh_init_55" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_s0_f" to="nw_hs1_r" color="170,172,176">
+        <stop parkingArea="pj_wh_pa_s0_f" duration="2344"/>
+    </trip>
+    <trip id="pj_wh_init_56" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_s0_f" to="nw_hs1_r" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_s0_f" duration="3150"/>
+    </trip>
+    <trip id="pj_wh_init_57" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_s0_f" to="nw_hs1_r" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_s0_f" duration="2696"/>
+    </trip>
+    <trip id="pj_wh_init_58" type="pj_wh_car" depart="0" departPos="stop" from="pj_wh_s0_f" to="nw_hs1_r" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_s0_f" duration="2835"/>
+    </trip>
+    <flow id="pj_wh_f_pj_wh_pa_a0_f" type="pj_wh_car" begin="0" end="100000" probability="0.00233" from="nw_hs1_f" to="nw_hs4_f" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="pj_wh_pa_a0_f" duration="1200"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_a0_r" type="pj_wh_car" begin="0" end="100000" probability="0.00167" from="nw_wg_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="30,30,32">
+        <stop parkingArea="pj_wh_pa_a0_r" duration="2400"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_a1_f" type="pj_wh_car" begin="0" end="100000" probability="0.00078" from="nw_hs4_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="170,172,176">
+        <stop parkingArea="pj_wh_pa_a1_f" duration="3600"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_a1_r" type="pj_wh_car" begin="0" end="100000" probability="0.00050" from="nw_hs1_f" to="nw_hs1_r" departLane="best" departSpeed="max" color="110,112,118">
+        <stop parkingArea="pj_wh_pa_a1_r" duration="4800"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_a2_f" type="pj_wh_car" begin="0" end="100000" probability="0.00333" from="nw_wg_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="35,55,95">
+        <stop parkingArea="pj_wh_pa_a2_f" duration="1200"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_a2_r" type="pj_wh_car" begin="0" end="100000" probability="0.00133" from="nw_hs4_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="150,30,35">
+        <stop parkingArea="pj_wh_pa_a2_r" duration="2400"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_n0_r" type="pj_wh_car" begin="0" end="100000" probability="0.00056" from="nw_hs1_f" to="nw_hs4_f" departLane="best" departSpeed="max" color="235,235,230">
+        <stop parkingArea="pj_wh_pa_n0_r" duration="3600"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_n1_r" type="pj_wh_car" begin="0" end="100000" probability="0.00033" from="nw_wg_r" to="nw_hs1_r" departLane="best" departSpeed="max" color="60,62,66">
+        <stop parkingArea="pj_wh_pa_n1_r" duration="4800"/>
+    </flow>
+    <flow id="pj_wh_f_pj_wh_pa_s0_f" type="pj_wh_car" begin="0" end="100000" probability="0.00167" from="nw_hs4_r" to="nw_hs4_f" departLane="best" departSpeed="max" color="200,200,205">
+        <stop parkingArea="pj_wh_pa_s0_f" duration="1200"/>
+    </flow>
+</routes>

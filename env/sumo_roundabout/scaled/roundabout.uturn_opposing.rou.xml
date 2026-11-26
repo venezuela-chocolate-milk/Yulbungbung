@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <flow id="uo_cross" type="car" from="SW_end_T_left_out" to="SW_new_cross_out" begin="0" end="100000" vehsPerHour="240.000" departLane="random" departPos="base" departSpeed="max" />
+    <flow id="uo_upper" type="car" from="SW_end_T_left_out" to="SW_new_upper_out" begin="0" end="100000" vehsPerHour="80.000" departLane="random" departPos="base" departSpeed="max" />
+    <flow id="uo_lower" type="car" from="SW_end_T_left_out" to="SW_new_lower_out" begin="0" end="100000" vehsPerHour="80.000" departLane="random" departPos="base" departSpeed="max" />
+</routes>

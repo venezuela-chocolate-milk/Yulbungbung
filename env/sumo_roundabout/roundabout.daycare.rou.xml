@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 마전어린이집 주차장 차 (env/roundabout_majeon_daycare.py): 칸에 주차했다가 나간다. 처음부터 서 있는 차는 departPos="stop". -->
+<routes>
+    <vType id="dc_car" carFollowModel="IDM" accel="2.0" decel="4.0" maxSpeed="16.67" speedDev="0.1" vClass="passenger" guiShape="passenger/sedan" length="4.6" color="200,200,205"/>
+    <trip id="dc_init_0" type="dc_car" depart="0" departPos="stop" from="mz_kfar_r" to="mx_ne_in_gd" color="200,200,205">
+        <stop parkingArea="mz_kpa_far_r" duration="3251"/>
+    </trip>
+    <trip id="dc_init_1" type="dc_car" depart="0" departPos="stop" from="mz_kfar_r" to="SE_triangle_forward_in" color="60,62,66">
+        <stop parkingArea="mz_kpa_far_r" duration="3328"/>
+    </trip>
+    <trip id="dc_init_2" type="dc_car" depart="0" departPos="stop" from="mz_kfar_r" to="SE_triangle_forward_in" color="245,245,245">
+        <stop parkingArea="mz_kpa_far_r" duration="3596"/>
+    </trip>
+    <trip id="dc_init_3" type="dc_car" depart="0" departPos="stop" from="mz_kfar_r" to="mx_ne_in_gd" color="235,235,230">
+        <stop parkingArea="mz_kpa_far_r" duration="2971"/>
+    </trip>
+    <trip id="dc_init_4" type="dc_car" depart="0" departPos="stop" from="mz_kfar_r" to="SE_triangle_forward_in" color="60,62,66">
+        <stop parkingArea="mz_kpa_far_r" duration="732"/>
+    </trip>
+    <trip id="dc_init_5" type="dc_car" depart="0" departPos="stop" from="mz_kleft_f" to="mx_ne_in_gd" color="110,112,118">
+        <stop parkingArea="mz_kpa_left_f" duration="1736"/>
+    </trip>
+    <trip id="dc_init_6" type="dc_car" depart="0" departPos="stop" from="mz_kleft_f" to="SE_triangle_forward_in" color="170,172,176">
+        <stop parkingArea="mz_kpa_left_f" duration="2428"/>
+    </trip>
+    <trip id="dc_init_7" type="dc_car" depart="0" departPos="stop" from="mz_kleft_r" to="SE_triangle_forward_in" color="60,62,66">
+        <stop parkingArea="mz_kpa_left_r" duration="2748"/>
+    </trip>
+    <trip id="dc_init_8" type="dc_car" depart="0" departPos="stop" from="mz_kright_f" to="mx_ne_in_gd" color="200,200,205">
+        <stop parkingArea="mz_kpa_right_f" duration="851"/>
+    </trip>
+    <trip id="dc_init_9" type="dc_car" depart="0" departPos="stop" from="mz_kright_f" to="SE_triangle_forward_in" color="60,62,66">
+        <stop parkingArea="mz_kpa_right_f" duration="1273"/>
+    </trip>
+    <trip id="dc_init_10" type="dc_car" depart="0" departPos="stop" from="mz_kright_f" to="mx_ne_in_gd" color="35,55,95">
+        <stop parkingArea="mz_kpa_right_f" duration="3461"/>
+    </trip>
+    <trip id="dc_init_11" type="dc_car" depart="0" departPos="stop" from="mz_kright_r" to="SE_triangle_forward_in" color="245,245,245">
+        <stop parkingArea="mz_kpa_right_r" duration="735"/>
+    </trip>
+    <trip id="dc_init_12" type="dc_car" depart="0" departPos="stop" from="mz_kright_r" to="mx_ne_in_gd" color="150,30,35">
+        <stop parkingArea="mz_kpa_right_r" duration="1720"/>
+    </trip>
+    <trip id="dc_init_13" type="dc_car" depart="0" departPos="stop" from="mz_kright_r" to="mx_ne_in_gd" color="150,30,35">
+        <stop parkingArea="mz_kpa_right_r" duration="3335"/>
+    </trip>
+    <flow id="dc_f_mz_kpa_far_r" type="dc_car" begin="0" end="100000" probability="0.00525" from="S_conn_up_me_1" to="mx_ne_in_gd" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="mz_kpa_far_r" duration="600"/>
+    </flow>
+    <flow id="dc_f_mz_kpa_left_f" type="dc_car" begin="0" end="100000" probability="0.00187" from="mx_ne_out_gd" to="SE_triangle_forward_in" departLane="best" departSpeed="max" color="30,30,32">
+        <stop parkingArea="mz_kpa_left_f" duration="1200"/>
+    </flow>
+    <flow id="dc_f_mz_kpa_left_r" type="dc_car" begin="0" end="100000" probability="0.00094" from="S_conn_up_me_1" to="mx_ne_in_gd" departLane="best" departSpeed="max" color="170,172,176">
+        <stop parkingArea="mz_kpa_left_r" duration="2400"/>
+    </flow>
+    <flow id="dc_f_mz_kpa_right_f" type="dc_car" begin="0" end="100000" probability="0.00063" from="mx_ne_out_gd" to="SE_triangle_forward_in" departLane="best" departSpeed="max" color="110,112,118">
+        <stop parkingArea="mz_kpa_right_f" duration="3600"/>
+    </flow>
+    <flow id="dc_f_mz_kpa_right_r" type="dc_car" begin="0" end="100000" probability="0.00375" from="S_conn_up_me_1" to="mx_ne_in_gd" departLane="best" departSpeed="max" color="35,55,95">
+        <stop parkingArea="mz_kpa_right_r" duration="600"/>
+    </flow>
+</routes>

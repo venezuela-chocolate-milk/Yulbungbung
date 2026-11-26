@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 피오레대주 주차장 차 (env/roundabout_fiore_parking.py): 큰 교차점에서 골목으로 들어와 주차했다가 다시 나간다. -->
+<routes>
+    <vType id="pf_car" carFollowModel="IDM" accel="2.0" decel="4.0" maxSpeed="16.67" speedDev="0.1" vClass="passenger" guiShape="passenger/sedan" length="4.6" color="200,200,205"/>
+    <trip id="pf_init_0" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_forward_out_up" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_f" duration="1560"/>
+    </trip>
+    <trip id="pf_init_1" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_left_out" color="60,62,66">
+        <stop parkingArea="pf_pa_a0_f" duration="2695"/>
+    </trip>
+    <trip id="pf_init_2" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_left_out" color="30,30,32">
+        <stop parkingArea="pf_pa_a0_f" duration="309"/>
+    </trip>
+    <trip id="pf_init_3" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_left_out" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_f" duration="734"/>
+    </trip>
+    <trip id="pf_init_4" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_forward_out_up" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_f" duration="2223"/>
+    </trip>
+    <trip id="pf_init_5" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SE_triangle_SW_in" color="150,30,35">
+        <stop parkingArea="pf_pa_a0_f" duration="2008"/>
+    </trip>
+    <trip id="pf_init_6" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_left_out" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_f" duration="2351"/>
+    </trip>
+    <trip id="pf_init_7" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_forward_out_up" color="245,245,245">
+        <stop parkingArea="pf_pa_a0_f" duration="1594"/>
+    </trip>
+    <trip id="pf_init_8" type="pf_car" depart="0" departPos="stop" from="pf_a0_f" to="SW_final_forward_out_up" color="150,30,35">
+        <stop parkingArea="pf_pa_a0_f" duration="1672"/>
+    </trip>
+    <trip id="pf_init_9" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SE_triangle_SW_in" color="30,30,32">
+        <stop parkingArea="pf_pa_a0_r" duration="260"/>
+    </trip>
+    <trip id="pf_init_10" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SE_triangle_SW_in" color="60,62,66">
+        <stop parkingArea="pf_pa_a0_r" duration="2726"/>
+    </trip>
+    <trip id="pf_init_11" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SE_triangle_SW_in" color="30,30,32">
+        <stop parkingArea="pf_pa_a0_r" duration="1387"/>
+    </trip>
+    <trip id="pf_init_12" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SW_final_left_out" color="150,30,35">
+        <stop parkingArea="pf_pa_a0_r" duration="2791"/>
+    </trip>
+    <trip id="pf_init_13" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SW_final_forward_out_up" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_r" duration="1399"/>
+    </trip>
+    <trip id="pf_init_14" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SW_final_left_out" color="170,172,176">
+        <stop parkingArea="pf_pa_a0_r" duration="2489"/>
+    </trip>
+    <trip id="pf_init_15" type="pf_car" depart="0" departPos="stop" from="pf_a0_r" to="SE_triangle_SW_in" color="200,200,205">
+        <stop parkingArea="pf_pa_a0_r" duration="2341"/>
+    </trip>
+    <trip id="pf_init_16" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SW_final_left_out" color="150,30,35">
+        <stop parkingArea="pf_pa_aL1_f" duration="623"/>
+    </trip>
+    <trip id="pf_init_17" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SW_final_forward_out_up" color="200,200,205">
+        <stop parkingArea="pf_pa_aL1_f" duration="2463"/>
+    </trip>
+    <trip id="pf_init_18" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SW_final_left_out" color="235,235,230">
+        <stop parkingArea="pf_pa_aL1_f" duration="2589"/>
+    </trip>
+    <trip id="pf_init_19" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SE_triangle_SW_in" color="235,235,230">
+        <stop parkingArea="pf_pa_aL1_f" duration="1941"/>
+    </trip>
+    <trip id="pf_init_20" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SE_triangle_SW_in" color="110,112,118">
+        <stop parkingArea="pf_pa_aL1_f" duration="2423"/>
+    </trip>
+    <trip id="pf_init_21" type="pf_car" depart="0" departPos="stop" from="pf_aL1_f" to="SE_triangle_SW_in" color="235,235,230">
+        <stop parkingArea="pf_pa_aL1_f" duration="214"/>
+    </trip>
+    <trip id="pf_init_22" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SW_final_forward_out_up" color="60,62,66">
+        <stop parkingArea="pf_pa_aL1_r" duration="3437"/>
+    </trip>
+    <trip id="pf_init_23" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SE_triangle_SW_in" color="170,172,176">
+        <stop parkingArea="pf_pa_aL1_r" duration="1770"/>
+    </trip>
+    <trip id="pf_init_24" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SW_final_forward_out_up" color="110,112,118">
+        <stop parkingArea="pf_pa_aL1_r" duration="607"/>
+    </trip>
+    <trip id="pf_init_25" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SE_triangle_SW_in" color="60,62,66">
+        <stop parkingArea="pf_pa_aL1_r" duration="1606"/>
+    </trip>
+    <trip id="pf_init_26" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SW_final_left_out" color="110,112,118">
+        <stop parkingArea="pf_pa_aL1_r" duration="1789"/>
+    </trip>
+    <trip id="pf_init_27" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SE_triangle_SW_in" color="60,62,66">
+        <stop parkingArea="pf_pa_aL1_r" duration="1484"/>
+    </trip>
+    <trip id="pf_init_28" type="pf_car" depart="0" departPos="stop" from="pf_aL1_r" to="SW_final_left_out" color="110,112,118">
+        <stop parkingArea="pf_pa_aL1_r" duration="330"/>
+    </trip>
+    <trip id="pf_init_29" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SW_final_forward_out_up" color="30,30,32">
+        <stop parkingArea="pf_pa_aR1_f" duration="1262"/>
+    </trip>
+    <trip id="pf_init_30" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SE_triangle_SW_in" color="30,30,32">
+        <stop parkingArea="pf_pa_aR1_f" duration="1544"/>
+    </trip>
+    <trip id="pf_init_31" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SE_triangle_SW_in" color="60,62,66">
+        <stop parkingArea="pf_pa_aR1_f" duration="1013"/>
+    </trip>
+    <trip id="pf_init_32" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SW_final_forward_out_up" color="235,235,230">
+        <stop parkingArea="pf_pa_aR1_f" duration="2092"/>
+    </trip>
+    <trip id="pf_init_33" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SW_final_left_out" color="170,172,176">
+        <stop parkingArea="pf_pa_aR1_f" duration="2575"/>
+    </trip>
+    <trip id="pf_init_34" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SW_final_left_out" color="150,30,35">
+        <stop parkingArea="pf_pa_aR1_f" duration="334"/>
+    </trip>
+    <trip id="pf_init_35" type="pf_car" depart="0" departPos="stop" from="pf_aR1_f" to="SW_final_forward_out_up" color="35,55,95">
+        <stop parkingArea="pf_pa_aR1_f" duration="1380"/>
+    </trip>
+    <trip id="pf_init_36" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SW_final_left_out" color="200,200,205">
+        <stop parkingArea="pf_pa_aR1_r" duration="3106"/>
+    </trip>
+    <trip id="pf_init_37" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SE_triangle_SW_in" color="60,62,66">
+        <stop parkingArea="pf_pa_aR1_r" duration="1498"/>
+    </trip>
+    <trip id="pf_init_38" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SE_triangle_SW_in" color="30,30,32">
+        <stop parkingArea="pf_pa_aR1_r" duration="1766"/>
+    </trip>
+    <trip id="pf_init_39" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SE_triangle_SW_in" color="170,172,176">
+        <stop parkingArea="pf_pa_aR1_r" duration="1584"/>
+    </trip>
+    <trip id="pf_init_40" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SE_triangle_SW_in" color="150,30,35">
+        <stop parkingArea="pf_pa_aR1_r" duration="319"/>
+    </trip>
+    <trip id="pf_init_41" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SW_final_forward_out_up" color="60,62,66">
+        <stop parkingArea="pf_pa_aR1_r" duration="2409"/>
+    </trip>
+    <trip id="pf_init_42" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SW_final_left_out" color="35,55,95">
+        <stop parkingArea="pf_pa_aR1_r" duration="1009"/>
+    </trip>
+    <trip id="pf_init_43" type="pf_car" depart="0" departPos="stop" from="pf_aR1_r" to="SW_final_left_out" color="35,55,95">
+        <stop parkingArea="pf_pa_aR1_r" duration="3215"/>
+    </trip>
+    <trip id="pf_init_44" type="pf_car" depart="0" departPos="stop" from="pf_b0R1_f" to="SE_triangle_SW_in" color="150,30,35">
+        <stop parkingArea="pf_pa_b0R1_f" duration="3293"/>
+    </trip>
+    <flow id="pf_f_pf_pa_a0_f" type="pf_car" begin="0" end="100000" probability="0.00467" from="SE_triangle_SW_out_far" to="SW_final_forward_out_up" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="pf_pa_a0_f" duration="1200"/>
+    </flow>
+    <flow id="pf_f_pf_pa_a0_r" type="pf_car" begin="0" end="100000" probability="0.00233" from="SW_final_forward_in_mj_2" to="SW_final_left_out" departLane="best" departSpeed="max" color="30,30,32">
+        <stop parkingArea="pf_pa_a0_r" duration="2400"/>
+    </flow>
+    <flow id="pf_f_pf_pa_aL1_f" type="pf_car" begin="0" end="100000" probability="0.00189" from="mj_b1_r" departPos="124.3" via="SW_final_left_in_mj_1 SW_final_left_in pf_aL1_f" to="SE_triangle_SW_in" departLane="best" departSpeed="max" color="170,172,176">
+        <stop parkingArea="pf_pa_aL1_f" duration="3600"/>
+    </flow>
+    <flow id="pf_f_pf_pa_aL1_r" type="pf_car" begin="0" end="100000" probability="0.00150" from="SE_triangle_SW_out_far" to="SW_final_forward_out_up" departLane="best" departSpeed="max" color="110,112,118">
+        <stop parkingArea="pf_pa_aL1_r" duration="4800"/>
+    </flow>
+    <flow id="pf_f_pf_pa_aR1_f" type="pf_car" begin="0" end="100000" probability="0.00567" from="SW_final_forward_in_mj_2" to="SW_final_left_out" departLane="best" departSpeed="max" color="35,55,95">
+        <stop parkingArea="pf_pa_aR1_f" duration="1200"/>
+    </flow>
+    <flow id="pf_f_pf_pa_aR1_r" type="pf_car" begin="0" end="100000" probability="0.00283" from="mj_b1_r" departPos="124.3" via="SW_final_left_in_mj_1 SW_final_left_in pf_aR1_r" to="SE_triangle_SW_in" departLane="best" departSpeed="max" color="150,30,35">
+        <stop parkingArea="pf_pa_aR1_r" duration="2400"/>
+    </flow>
+    <flow id="pf_f_pf_pa_b0R1_f" type="pf_car" begin="0" end="100000" probability="0.00011" from="SE_triangle_SW_out_far" to="SW_final_forward_out_up" departLane="best" departSpeed="max" color="235,235,230">
+        <stop parkingArea="pf_pa_b0R1_f" duration="3600"/>
+    </flow>
+    <flow id="pf_f_pf_pa_bL10_f" type="pf_car" begin="0" end="100000" probability="0.00008" from="SW_final_forward_in_mj_2" to="SW_final_left_out" departLane="best" departSpeed="max" color="60,62,66">
+        <stop parkingArea="pf_pa_bL10_f" duration="4800"/>
+    </flow>
+</routes>

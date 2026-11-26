@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 상가 골목(env/roundabout_shops.py) 오가는 차. 골목 안에서 출발·도착(주차)한다.
+     큰길(완정로)·117번길은 우회전 진입·진출만 되므로 남서쪽·북쪽에서 오는 차는 117번길로 들어온다. -->
+<routes>
+    <flow id="shops_in_main" type="car" from="X_main_in" to="shop_d1b_f" begin="0" end="100000" vehsPerHour="25" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="shops_in_nw" type="car" from="nw_wj1_r" departPos="17.2" via="X_nw_in" to="shop_d2a_f" begin="0" end="100000" vehsPerHour="15" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="shops_in_117" type="car" from="int_117_r" departPos="52.4" via="T_stop_side_in_a_int_1 T_stop_side_in_a" to="shop_c2b_f" begin="0" end="100000" vehsPerHour="15" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="shops_out_main" type="car" from="shop_d1a_r" to="X_main_out" begin="0" end="100000" vehsPerHour="20" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="shops_out_nw" type="car" from="shop_v1_r" to="X_nw_out" begin="0" end="100000" vehsPerHour="15" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="shops_out_se" type="car" from="shop_d2b_f" via="shop_c3b_r" to="X_se_out_b" begin="0" end="100000" vehsPerHour="15" departLane="best" departPos="54.2" departSpeed="0"/>
+    <flow id="shops_local" type="car" from="shop_d2b_r" to="shop_c1_r" begin="0" end="100000" vehsPerHour="15" departLane="best" departPos="random" departSpeed="0"/>
+</routes>

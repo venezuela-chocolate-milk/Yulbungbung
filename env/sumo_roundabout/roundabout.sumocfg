@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="roundabout.net.xml"/>
+        <route-files value="roundabout.rou.xml"/>
+        <additional-files value="roundabout.deco.xml"/>
+    </input>
+    <gui_only>
+        <gui-settings-file value="roundabout.gui.xml"/>
+    </gui_only>
+</configuration>

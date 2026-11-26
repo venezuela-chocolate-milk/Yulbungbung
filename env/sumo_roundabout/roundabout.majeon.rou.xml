@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 마전동 골목(env/roundabout_majeon.py) 오가는 차 (2026-11-12). 골목 안에서 출발·도착(주차)하는 차와
+     큰길(65번길·완정로·원당대로)에서 우회전으로 드나드는 차. 시간당 적은 양. -->
+<routes>
+    <flow id="mj_in_wanjeong" type="car" from="SE_triangle_forward_out" to="mj_eb_f" begin="0" end="100000" vehsPerHour="12" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="mj_in_65" type="car" from="SW_final_forward_in" to="mj_c_f" begin="0" end="100000" vehsPerHour="12" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="mj_in_wondang" type="car" from="SW_end_T_left_in_far" to="mj_b1b_r" begin="0" end="100000" vehsPerHour="12" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="mj_out_wondang" type="car" from="mj_h_f" to="SW_final_forward_out_up_int_1" begin="0" end="100000" vehsPerHour="12" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="mj_out_wanjeong" type="car" from="mj_w1_f" to="S_conn_down1" begin="0" end="100000" vehsPerHour="12" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="mj_local_b1" type="car" from="mj_b1_f" to="mj_d_f" begin="0" end="100000" vehsPerHour="12" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="mj_local_e" type="car" from="SW_final_forward_in" via="mj_e_f" to="mj_s1d_f" begin="0" end="100000" vehsPerHour="12" departLane="best" departPos="20.4" departSpeed="0"/>
+    <flow id="mj_local_c" type="car" from="mj_c_r" to="mj_g_r" begin="0" end="100000" vehsPerHour="12" departLane="best" departPos="random" departSpeed="0"/>
+</routes>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vType id="firetruck" vClass="emergency" guiShape="firebrigade" length="9.0" width="2.5" color="220,20,20" accel="1.5" decel="4.5" maxSpeed="16.67" />
+    <flow id="nw_in_main" type="car" from="X_main_in" to="nw_r2b" begin="0" end="100000" vehsPerHour="16.000" departLane="best" departSpeed="max" arrivalPos="random" />
+    <flow id="nw_in_se" type="car" from="X_se_in" to="nw_c1b" begin="0" end="100000" vehsPerHour="72.000" departLane="best" departSpeed="max" arrivalPos="random" />
+    <flow id="nw_in_wj" type="car" from="N_out0_far" to="nw_c1c" begin="0" end="100000" vehsPerHour="36.000" departLane="best" departSpeed="max" arrivalPos="random" />
+    <flow id="nw_out_main" type="car" from="nw_r1a" to="X_main_out" begin="0" end="100000" vehsPerHour="72.000" departLane="best" departPos="random" departSpeed="0" />
+    <flow id="nw_out_sw" type="car" from="nw_r4_r" to="X_main_out" begin="0" end="100000" vehsPerHour="72.000" departLane="best" departPos="random" departSpeed="0" />
+    <flow id="nw_out_wj" type="car" from="nw_c1b" via="nw_c1c nw_c1d" to="N_in1_far" begin="0" end="100000" vehsPerHour="24.000" departLane="best" departPos="0.0" departSpeed="0" />
+    <flow id="nw_local" type="car" from="nw_445c_f" to="X_se_out" begin="0" end="100000" vehsPerHour="48.000" departLane="best" departPos="random" departSpeed="0" />
+    <flow id="nw_park" type="car" from="nw_wj1_r" departPos="17.2" via="X_nw_in" to="nw_r4_f" begin="0" end="100000" vehsPerHour="8.800" departLane="best" departSpeed="max" arrivalPos="random" />
+    <flow id="nw_aw" type="car" from="nw_r1a" via="nw_aw_f" to="X_main_out" begin="0" end="100000" vehsPerHour="38.400" departLane="best" departPos="69.2" departSpeed="0" />
+    <flow id="wj_through_in" type="car" from="N_out0_far" to="X_main_out" begin="0" end="100000" vehsPerHour="48.000" departLane="best" departSpeed="max" />
+    <flow id="wj_through_out" type="car" from="X_main_in" to="N_in1_far" begin="0" end="100000" vehsPerHour="16.000" departLane="best" departSpeed="max" />
+    
+    <flow id="x_south" type="car" from="nw_445n_r" to="T_side_in" begin="0" end="100000" vehsPerHour="120.000" departLane="best" departSpeed="max" />
+    <flow id="x_north" type="car" from="T_side_out" to="nw_445n_f" begin="0" end="100000" vehsPerHour="64.000" departLane="best" departSpeed="max" />
+    <flow id="x_left_e2s" type="car" from="X_main_in" to="T_side_in" begin="0" end="100000" vehsPerHour="12.000" departLane="best" departSpeed="max" />
+    <flow id="x_w2s" type="car" from="N_out0_far" to="T_side_in" begin="0" end="100000" vehsPerHour="24.000" departLane="best" departSpeed="max" />
+    <flow id="x_n2w" type="car" from="T_side_out" to="N_in1_far" begin="0" end="100000" vehsPerHour="32.000" departLane="best" departSpeed="max" />
+    
+</routes>

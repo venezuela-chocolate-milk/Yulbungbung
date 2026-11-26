@@ -1,0 +1,22 @@
+{
+  "lane_count": 475,
+  "lane_widths_m": [
+    3.2
+  ],
+  "terrain_elements_fitted": 211,
+  "terrain_overlap_before_m2": 0.0,
+  "terrain_overlap_after_m2": 0.0,
+  "ring_center_radius_m": 20.0,
+  "ring_inner_radius_m": 16.8,
+  "ring_outer_radius_m": 23.2,
+  "simulation_run": false,
+  "parallel_movements": 64,
+  "max_endpoint_gap": 1.2710574864626038e-13,
+  "max_spacing_error": 6.759843203685278e-05,
+  "max_full_width_strip_error": 2.5290880500961066e-13,
+  "junctions_fitted": 34,
+  "white_dash_length_m": 2.9919930034188504,
+  "white_dash_gap_m": 2.9919930034188504,
+  "white_dash_route_count": 53,
+  "white_dash_count": 3020
+}

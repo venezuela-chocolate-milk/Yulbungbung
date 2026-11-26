@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 북서쪽 상가 골목(env/roundabout_nw_shops.py) 오가는 차, 연장한 완정로 통과 차, 왕길119안전센터 소방차.
+     골목 차는 골목 안에서 출발·도착(주차)한다. 소방차는 센터 안에서 출발해 출구로 완정로에 나가 출동한다. -->
+<routes>
+    <vType id="firetruck" vClass="emergency" guiShape="firebrigade" length="9.0" width="2.5" color="220,20,20"
+           accel="1.5" decel="4.5" maxSpeed="16.67"/>
+    <flow id="nw_in_main" type="car" from="X_main_in" to="nw_r2b" begin="0" end="100000" vehsPerHour="20" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="nw_in_se" type="car" from="X_se_in" to="nw_c1b" begin="0" end="100000" vehsPerHour="15" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="nw_in_wj" type="car" from="N_out0_far" to="nw_c1c" begin="0" end="100000" vehsPerHour="15" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="nw_out_main" type="car" from="nw_r1a" to="X_main_out" begin="0" end="100000" vehsPerHour="15" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="nw_out_sw" type="car" from="nw_r4_r" to="X_main_out" begin="0" end="100000" vehsPerHour="15" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="nw_out_wj" type="car" from="nw_c1b" via="nw_c1c nw_c1d" to="N_in1_far" begin="0" end="100000" vehsPerHour="10" departLane="best" departPos="0.0" departSpeed="0"/>
+    <flow id="nw_local" type="car" from="nw_445c_f" to="X_se_out" begin="0" end="100000" vehsPerHour="10" departLane="best" departPos="random" departSpeed="0"/>
+    <flow id="nw_park" type="car" from="nw_wj1_r" departPos="17.2" via="X_nw_in" to="nw_r4_f" begin="0" end="100000" vehsPerHour="10" departLane="best" departSpeed="max" arrivalPos="random"/>
+    <flow id="nw_aw" type="car" from="nw_r1a" via="nw_aw_f" to="X_main_out" begin="0" end="100000" vehsPerHour="8" departLane="best" departPos="69.2" departSpeed="0"/>
+    <flow id="wj_through_in" type="car" from="N_out0_far" to="X_main_out" begin="0" end="100000" vehsPerHour="20" departLane="best" departSpeed="max"/>
+    <flow id="wj_through_out" type="car" from="X_main_in" to="N_in1_far" begin="0" end="100000" vehsPerHour="20" departLane="best" departSpeed="max"/>
+    <!-- 2026-11-12 완정로 × 445번길 사거리: 세로 도로 통과 차와 사거리에서 도는 차 -->
+    <flow id="x_south" type="car" from="nw_445n_r" to="T_side_in" begin="0" end="100000" vehsPerHour="25" departLane="best" departSpeed="max"/>
+    <flow id="x_north" type="car" from="T_side_out" to="nw_445n_f" begin="0" end="100000" vehsPerHour="20" departLane="best" departSpeed="max"/>
+    <flow id="x_left_e2s" type="car" from="X_main_in" to="T_side_in" begin="0" end="100000" vehsPerHour="15" departLane="best" departSpeed="max"/>
+    <flow id="x_w2s" type="car" from="N_out0_far" to="T_side_in" begin="0" end="100000" vehsPerHour="10" departLane="best" departSpeed="max"/>
+    <flow id="x_n2w" type="car" from="T_side_out" to="N_in1_far" begin="0" end="100000" vehsPerHour="10" departLane="best" departSpeed="max"/>
+    <!-- 2026-11-14: 소방차 출동은 env/roundabout_emergency.py (roundabout.emergency.rou.xml) 로 옮김 -->
+</routes>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- env/roundabout_rl_traffic.py 가 생성. 직접 고치지 말고 FLOWS 를 고칠 것 -->
+<routes>
+    <flow id="rl_lowEB_A_w" type="car" from="S_cross_w_in" to="SW_new_cross_out" begin="0" end="100000" vehsPerHour="120" departLane="best" departSpeed="max" />
+    <flow id="rl_lowEB_A_s" type="car" from="S_cross_s_in" to="SW_new_upper_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_lowEB_B_s" type="car" from="SW_cross_s_in" to="SW_new_lower_out" begin="0" end="100000" vehsPerHour="40" departLane="best" departSpeed="max" />
+    <flow id="rl_lowWB_A_w" type="car" from="SW_end_T_extension_in" to="S_cross_w_out" begin="0" end="100000" vehsPerHour="120" departLane="best" departSpeed="max" />
+    <flow id="rl_lowWB_A_s" type="car" from="sg_ext_s_me_3" departPos="78.1" via="SW_new_upper_in" to="S_cross_s_out" begin="0" end="100000" vehsPerHour="80" departLane="best" departSpeed="max" />
+    <flow id="rl_lowWB_B_s" type="car" from="SW_new_lower_in" to="SW_cross_s_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_lowWB_up" type="car" from="SW_end_T_extension_in" to="SE_triangle_NE_out" via="S_conn_up1" begin="0" end="100000" vehsPerHour="120" departLane="best" departSpeed="max" />
+    <flow id="rl_lowWB_north" type="car" from="sg_ext_s_me_3" departPos="78.1" via="SW_new_upper_in" to="W_out0_far" begin="0" end="100000" vehsPerHour="80" departLane="best" departSpeed="max" />
+    <flow id="rl_curve_down_1" type="car" from="X_main_in" to="S_cross_w_out" via="S_conn_down1" begin="0" end="100000" vehsPerHour="40" departLane="best" departSpeed="max" />
+    <flow id="rl_curve_down_2" type="car" from="nw_wj1_r" departPos="17.2" via="X_nw_in S_conn_down1" to="SW_cross_s_out" begin="0" end="100000" vehsPerHour="20" departLane="best" departSpeed="max" />
+    <flow id="rl_upSE_1" type="car" from="X_main_in" to="SE_triangle_NE_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_upSE_2" type="car" from="T_side_in" to="SW_final_right_out" begin="0" end="100000" vehsPerHour="30" departLane="best" departSpeed="max" />
+    <flow id="rl_upSE_3" type="car" from="nw_wj1_r" departPos="17.2" via="X_nw_in" to="SE_triangle_NE_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_upNW_1" type="car" from="SE_triangle_NE_in" to="X_main_out" begin="0" end="100000" vehsPerHour="120" departLane="best" departSpeed="max" />
+    <flow id="rl_upNW_2" type="car" from="SE_triangle_NE_in" to="T_side_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_upNW_3" type="car" from="SE_triangle_NE_in" to="W_out0_far" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_upNW_4" type="car" from="mj_b1_r" departPos="124.3" via="SW_final_left_in_mj_1 SW_final_left_in" to="X_nw_out" begin="0" end="100000" vehsPerHour="40" departLane="best" departSpeed="max" />
+    <flow id="rl_southS_1" type="car" from="N_in1_far" to="S_cross_s_out" begin="0" end="100000" vehsPerHour="40" departLane="best" departSpeed="max" />
+    <flow id="rl_southS_2" type="car" from="DANBONG_infar" to="SW_new_cross_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_southS_4" type="car" from="T_side_in" to="S_cross_s_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_southS_5" type="car" from="W_in1_far" to="SW_new_upper_out" via="S_out0_ext" begin="0" end="100000" vehsPerHour="100" departLane="best" departSpeed="max" />
+    <flow id="rl_southN_1" type="car" from="S_cross_s_in" to="N_out0_far" begin="0" end="100000" vehsPerHour="120" departLane="best" departSpeed="max" />
+    <flow id="rl_southN_2" type="car" from="S_cross_w_in" to="DANBONG_outfar" begin="0" end="100000" vehsPerHour="100" departLane="best" departSpeed="max" />
+    <flow id="rl_southN_4" type="car" from="SW_end_T_extension_in" to="W_out0_far" begin="0" end="100000" vehsPerHour="100" departLane="best" departSpeed="max" />
+    <flow id="rl_newX_ns" type="car" from="sg_ext_s_me_3" departPos="78.1" via="SW_new_upper_in" to="SW_new_lower_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+    <flow id="rl_newX_sn" type="car" from="SW_new_lower_in" to="SW_new_upper_out" begin="0" end="100000" vehsPerHour="60" departLane="best" departSpeed="max" />
+</routes>

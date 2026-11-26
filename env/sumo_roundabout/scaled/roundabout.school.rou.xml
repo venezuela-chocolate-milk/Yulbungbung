@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+    <vType id="sk_car" carFollowModel="IDM" accel="2.0" decel="4.0" maxSpeed="16.67" speedDev="0.1" vClass="passenger" guiShape="passenger/sedan" length="4.6" color="200,200,205" />
+    <trip id="sk_init_0" type="sk_car" depart="0" departPos="stop" from="skw_far_r" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skw_pa_far_r" duration="3102" />
+    </trip>
+    <trip id="sk_init_1" type="sk_car" depart="0" departPos="stop" from="skw_far_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skw_pa_far_r" duration="1205" />
+    </trip>
+    <trip id="sk_init_2" type="sk_car" depart="0" departPos="stop" from="skw_far_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_far_r" duration="546" />
+    </trip>
+    <trip id="sk_init_3" type="sk_car" depart="0" departPos="stop" from="skw_left_f" to="X_se_out_b" color="60,62,66">
+        <stop parkingArea="skw_pa_left_f" duration="234" />
+    </trip>
+    <trip id="sk_init_4" type="sk_car" depart="0" departPos="stop" from="skw_left_f" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_left_f" duration="2843" />
+    </trip>
+    <trip id="sk_init_5" type="sk_car" depart="0" departPos="stop" from="skw_left_f" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skw_pa_left_f" duration="706" />
+    </trip>
+    <trip id="sk_init_6" type="sk_car" depart="0" departPos="stop" from="skw_left_f" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_left_f" duration="2329" />
+    </trip>
+    <trip id="sk_init_7" type="sk_car" depart="0" departPos="stop" from="skw_left_f" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skw_pa_left_f" duration="4361" />
+    </trip>
+    <trip id="sk_init_8" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_left_r" duration="3001" />
+    </trip>
+    <trip id="sk_init_9" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="35,55,95">
+        <stop parkingArea="skw_pa_left_r" duration="337" />
+    </trip>
+    <trip id="sk_init_10" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skw_pa_left_r" duration="1452" />
+    </trip>
+    <trip id="sk_init_11" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="60,62,66">
+        <stop parkingArea="skw_pa_left_r" duration="3163" />
+    </trip>
+    <trip id="sk_init_12" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skw_pa_left_r" duration="1816" />
+    </trip>
+    <trip id="sk_init_13" type="sk_car" depart="0" departPos="stop" from="skw_left_r" to="X_se_out_b" color="30,30,32">
+        <stop parkingArea="skw_pa_left_r" duration="4875" />
+    </trip>
+    <trip id="sk_init_14" type="sk_car" depart="0" departPos="stop" from="skw_right_f" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skw_pa_right_f" duration="4245" />
+    </trip>
+    <trip id="sk_init_15" type="sk_car" depart="0" departPos="stop" from="skw_right_f" to="X_se_out_b" color="30,30,32">
+        <stop parkingArea="skw_pa_right_f" duration="1255" />
+    </trip>
+    <trip id="sk_init_16" type="sk_car" depart="0" departPos="stop" from="skw_right_f" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_right_f" duration="5117" />
+    </trip>
+    <trip id="sk_init_17" type="sk_car" depart="0" departPos="stop" from="skw_right_f" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skw_pa_right_f" duration="1789" />
+    </trip>
+    <trip id="sk_init_18" type="sk_car" depart="0" departPos="stop" from="skw_right_f" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skw_pa_right_f" duration="5390" />
+    </trip>
+    <trip id="sk_init_19" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skw_pa_right_r" duration="3349" />
+    </trip>
+    <trip id="sk_init_20" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skw_pa_right_r" duration="3175" />
+    </trip>
+    <trip id="sk_init_21" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skw_pa_right_r" duration="2025" />
+    </trip>
+    <trip id="sk_init_22" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skw_pa_right_r" duration="2986" />
+    </trip>
+    <trip id="sk_init_23" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skw_pa_right_r" duration="5236" />
+    </trip>
+    <trip id="sk_init_24" type="sk_car" depart="0" departPos="stop" from="skw_right_r" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skw_pa_right_r" duration="4704" />
+    </trip>
+    <trip id="sk_init_25" type="sk_car" depart="0" departPos="stop" from="skm_far_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skm_pa_far_r" duration="2908" />
+    </trip>
+    <trip id="sk_init_26" type="sk_car" depart="0" departPos="stop" from="skm_far_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skm_pa_far_r" duration="2078" />
+    </trip>
+    <trip id="sk_init_27" type="sk_car" depart="0" departPos="stop" from="skm_far_r" to="X_se_out_b" color="35,55,95">
+        <stop parkingArea="skm_pa_far_r" duration="671" />
+    </trip>
+    <trip id="sk_init_28" type="sk_car" depart="0" departPos="stop" from="skm_left_f" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skm_pa_left_f" duration="4520" />
+    </trip>
+    <trip id="sk_init_29" type="sk_car" depart="0" departPos="stop" from="skm_left_f" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skm_pa_left_f" duration="2712" />
+    </trip>
+    <trip id="sk_init_30" type="sk_car" depart="0" departPos="stop" from="skm_left_f" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skm_pa_left_f" duration="1416" />
+    </trip>
+    <trip id="sk_init_31" type="sk_car" depart="0" departPos="stop" from="skm_left_f" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_left_f" duration="1048" />
+    </trip>
+    <trip id="sk_init_32" type="sk_car" depart="0" departPos="stop" from="skm_left_f" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skm_pa_left_f" duration="3820" />
+    </trip>
+    <trip id="sk_init_33" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skm_pa_left_r" duration="5040" />
+    </trip>
+    <trip id="sk_init_34" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="170,172,176">
+        <stop parkingArea="skm_pa_left_r" duration="2178" />
+    </trip>
+    <trip id="sk_init_35" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skm_pa_left_r" duration="1136" />
+    </trip>
+    <trip id="sk_init_36" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skm_pa_left_r" duration="1355" />
+    </trip>
+    <trip id="sk_init_37" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skm_pa_left_r" duration="4695" />
+    </trip>
+    <trip id="sk_init_38" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skm_pa_left_r" duration="864" />
+    </trip>
+    <trip id="sk_init_39" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skm_pa_left_r" duration="4334" />
+    </trip>
+    <trip id="sk_init_40" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="35,55,95">
+        <stop parkingArea="skm_pa_left_r" duration="1556" />
+    </trip>
+    <trip id="sk_init_41" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="200,200,205">
+        <stop parkingArea="skm_pa_left_r" duration="4091" />
+    </trip>
+    <trip id="sk_init_42" type="sk_car" depart="0" departPos="stop" from="skm_left_r" to="X_se_out_b" color="60,62,66">
+        <stop parkingArea="skm_pa_left_r" duration="1306" />
+    </trip>
+    <trip id="sk_init_43" type="sk_car" depart="0" departPos="stop" from="skm_right_f" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skm_pa_right_f" duration="2336" />
+    </trip>
+    <trip id="sk_init_44" type="sk_car" depart="0" departPos="stop" from="skm_right_f" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skm_pa_right_f" duration="956" />
+    </trip>
+    <trip id="sk_init_45" type="sk_car" depart="0" departPos="stop" from="skm_right_f" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skm_pa_right_f" duration="518" />
+    </trip>
+    <trip id="sk_init_46" type="sk_car" depart="0" departPos="stop" from="skm_right_f" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skm_pa_right_f" duration="2849" />
+    </trip>
+    <trip id="sk_init_47" type="sk_car" depart="0" departPos="stop" from="skm_right_f" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_right_f" duration="4784" />
+    </trip>
+    <trip id="sk_init_48" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="235,235,230">
+        <stop parkingArea="skm_pa_right_r" duration="3493" />
+    </trip>
+    <trip id="sk_init_49" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="245,245,245">
+        <stop parkingArea="skm_pa_right_r" duration="3664" />
+    </trip>
+    <trip id="sk_init_50" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_right_r" duration="4843" />
+    </trip>
+    <trip id="sk_init_51" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_right_r" duration="1635" />
+    </trip>
+    <trip id="sk_init_52" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="30,30,32">
+        <stop parkingArea="skm_pa_right_r" duration="5352" />
+    </trip>
+    <trip id="sk_init_53" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="110,112,118">
+        <stop parkingArea="skm_pa_right_r" duration="3019" />
+    </trip>
+    <trip id="sk_init_54" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_right_r" duration="1457" />
+    </trip>
+    <trip id="sk_init_55" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="150,30,35">
+        <stop parkingArea="skm_pa_right_r" duration="373" />
+    </trip>
+    <trip id="sk_init_56" type="sk_car" depart="0" departPos="stop" from="skm_right_r" to="X_se_out_b" color="60,62,66">
+        <stop parkingArea="skm_pa_right_r" duration="2762" />
+    </trip>
+    <flow id="sk_f_skw_pa_far_r" type="sk_car" begin="0" end="100000" probability="0.005600" from="X_main_in" to="X_se_out_b" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="skw_pa_far_r" duration="450" />
+    </flow>
+    <flow id="sk_f_skw_pa_left_f" type="sk_car" begin="0" end="100000" probability="0.005600" from="nw_wj1_r" departPos="17.2" via="X_nw_in skw_left_f" to="X_se_out_b" departLane="best" departSpeed="max" color="30,30,32">
+        <stop parkingArea="skw_pa_left_f" duration="900" />
+    </flow>
+    <flow id="sk_f_skw_pa_left_r" type="sk_car" begin="0" end="100000" probability="0.002800" from="X_main_in" to="X_se_out_b" departLane="best" departSpeed="max" color="170,172,176">
+        <stop parkingArea="skw_pa_left_r" duration="1800" />
+    </flow>
+    <flow id="sk_f_skw_pa_right_f" type="sk_car" begin="0" end="100000" probability="0.001872" from="nw_wj1_r" departPos="17.2" via="X_nw_in skw_right_f" to="X_se_out_b" departLane="best" departSpeed="max" color="110,112,118">
+        <stop parkingArea="skw_pa_right_f" duration="2700" />
+    </flow>
+    <flow id="sk_f_skw_pa_right_r" type="sk_car" begin="0" end="100000" probability="0.011200" from="X_main_in" to="X_se_out_b" departLane="best" departSpeed="max" color="35,55,95">
+        <stop parkingArea="skw_pa_right_r" duration="450" />
+    </flow>
+    <flow id="sk_f_skm_pa_far_r" type="sk_car" begin="0" end="100000" probability="0.002800" from="nw_wj1_r" departPos="17.2" via="X_nw_in skm_far_r" to="X_se_out_b" departLane="best" departSpeed="max" color="150,30,35">
+        <stop parkingArea="skm_pa_far_r" duration="900" />
+    </flow>
+    <flow id="sk_f_skm_pa_left_f" type="sk_car" begin="0" end="100000" probability="0.002800" from="X_main_in" to="X_se_out_b" departLane="best" departSpeed="max" color="235,235,230">
+        <stop parkingArea="skm_pa_left_f" duration="1800" />
+    </flow>
+    <flow id="sk_f_skm_pa_left_r" type="sk_car" begin="0" end="100000" probability="0.001872" from="nw_wj1_r" departPos="17.2" via="X_nw_in skm_left_r" to="X_se_out_b" departLane="best" departSpeed="max" color="60,62,66">
+        <stop parkingArea="skm_pa_left_r" duration="2700" />
+    </flow>
+    <flow id="sk_f_skm_pa_right_f" type="sk_car" begin="0" end="100000" probability="0.011200" from="X_main_in" to="X_se_out_b" departLane="best" departSpeed="max" color="200,200,205">
+        <stop parkingArea="skm_pa_right_f" duration="450" />
+    </flow>
+    <flow id="sk_f_skm_pa_right_r" type="sk_car" begin="0" end="100000" probability="0.005600" from="nw_wj1_r" departPos="17.2" via="X_nw_in skm_right_r" to="X_se_out_b" departLane="best" departSpeed="max" color="245,245,245">
+        <stop parkingArea="skm_pa_right_r" duration="900" />
+    </flow>
+</routes>
