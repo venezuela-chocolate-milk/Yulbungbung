@@ -1,0 +1,12 @@
+# 이 프로젝트 실행 환경 (2026-11-16, Ubuntu 22.04.5 / Python 3.10.12 에서 실제로 쓰던 버전)
+# 설치:  python3 -m venv ~/sumo-venv && ~/sumo-venv/bin/pip install -r requirements-sumo-driving.txt
+# GPU 없는 컴퓨터: torch 줄을 지우고  pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cpu
+eclipse-sumo==1.27.1
+libsumo==1.27.1
+traci==1.27.1
+sumolib==1.27.1
+torch==2.11.0
+numpy==2.2.6
+gymnasium==1.4.0
+shapely==2.1.2
+tensorboard==2.21.0
