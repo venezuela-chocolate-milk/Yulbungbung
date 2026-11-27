@@ -58,7 +58,7 @@ SUMO 로 만든 회전교차로가 있는 동네 지도에서, AV 가 약 5.6 km
 - 더 큰 비교(아래 강건성, 같은 5,000판)에서는 최종 PPO 의 완주율이 DAgger 최고보다 1.7%p 높았고, 이 차이는 우연으로 보기 어렵습니다.
 - 충돌 5% 기준: 500판 4.6%. 200판 seed 8000 에서는 6.0% 로 경계에 가깝습니다 (같은 200판에서 DAgger 최고는 7.5%).
 
-### 강건성 (처음 보는 seed 5개 × 1000판, 판마다 50% 확률로 긴급차)
+### 강건성 (처음 보는 seed 5개 × 1000판, 판마다 긴급차를 만날 때까지 투입)
 
 | Seed | 판 수 | 완주 | 충돌 | 신호위반 | 막힘·이탈 | 시간초과 |
 |---|---|---|---|---|---|---|
@@ -69,7 +69,7 @@ SUMO 로 만든 회전교차로가 있는 동네 지도에서, AV 가 약 5.6 km
 | 500,000 | 1,000 | 90.9% | 4.3% | 2.0% | 2.2% | 0.6% |
 | **합계** | **5,000** | **90.7%** | **4.74%** | 2.2% | 1.9% | 0.4% |
 
-합계 충돌률 4.74% (95% 범위 약 4.2~5.3%). 평균은 5% 미만이지만 기준선에 가깝고, seed 2개는 5.0% 이상이었습니다. seed별 차이는 1,000판 표본 오차(±1.4%p) 범위입니다. 강건성 조건은 일반 평가보다 어렵습니다 (판마다 50% 확률로 긴급차 추가).
+합계 충돌률 4.74% (95% 범위 약 4.2~5.3%). 평균은 5% 미만이지만 기준선에 가깝고, seed 2개는 5.0% 이상이었습니다. seed별 차이는 1,000판 표본 오차(±1.4%p) 범위입니다. 강건성 평가는 일반 평가와 같은 환경(판마다 AV 가 긴급차를 한 번 만날 때까지 뒤에서 투입, 119 정기 출동과 만나도 인정)에서 학습·모델 선정에 쓰지 않은 seed 로 판 수를 늘린 것입니다. 결과 파일 기준 약 97% 의 판에 긴급차가 1대 이상 투입됐습니다. 명령의 `--ev-prob 0.5` 는 이 '만날 때까지 투입' 설정이 켜진 환경에서는 효과가 없습니다.
 
 #### DAgger 최고와 비교 (같은 seed, 같은 5,000판)
 
@@ -117,7 +117,7 @@ python3 -m venv ~/sumo-venv
 
 ```bash
 # ③ 강사 1000판 + DART 1000판 수집 → ④ BC (seed 3개) → ⑤ DAgger 라운드 (결과: data/mom_N_*.npz, results/bc_N_*)
-bash run_new.sh 20                     # 20 = 병렬 작업자 수
+WAIT_MAX=0 bash run_new.sh 20         # 20 = 병렬 작업자 수. WAIT_MAX=0: 다른 PC 의 DART 데이터를 기다리지 않고 바로 직접 수집 (기본 60분 대기)
 
 # ⑥ PPO: DAgger 최고 (d3s0, models/dagger_best/model.pt) 에서 시작, BC 보조 손실 0.5, 학습률 2.5e-6 (최종 실행 E)
 LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
@@ -140,7 +140,7 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 # 최종 모델 평가 (작업자 수는 CPU 에 맞게)
 ~/sumo-venv/bin/python eval_parallel.py models/final_rl/model.pt --episodes 100 --workers 8 --seed 5000
 
-# 강건성 평가 (판마다 seed 고정, 긴급차 확률 0.5)
+# 강건성 평가 (판마다 seed 고정, 판마다 긴급차를 만날 때까지 투입. 결과와 같은 명령이며 --ev-prob 0.5 는 이 설정에서 효과 없음)
 ~/sumo-venv/bin/python eval_robust.py models/final_rl/model.pt --episodes 1000 --workers 8 --seed 100000 --ev-prob 0.5
 
 # 주행 영상 (sumo-gui 필요)
@@ -161,7 +161,7 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 ~/sumo-venv/bin/python export_csv.py data/final_N_rl_part1.jsonl.gz --rows 15
 ```
 
-`scripts/collect_final_N.sh` 는 최종 데이터 4묶음 수집, `scripts/robust_N.sh` 는 강건성 평가 5개 seed 를 한 번에 돌리는 스크립트입니다.
+`scripts/robust_N.sh` 는 강건성 평가 5개 seed 를 한 번에 돌리는 스크립트입니다. `scripts/collect_final_N.sh` 는 최종 데이터 4묶음 수집에 쓴 팀 장비용 일괄 스크립트입니다 (수집 뒤 팀 장비로 SSH 전송까지 함).
 
 ## 6. 폴더
 
@@ -178,4 +178,4 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 | `models/final_rl/`, `models/dagger_best/` | 최종 PPO, 비교용 DAgger 최고 |
 | `project_materials/` | 수업 자료 |
 
-`run_new.sh` 와 `scripts/` 의 셸 스크립트는 저장소 폴더를 기준으로 움직이므로 어디에 받아도 그대로 실행됩니다. 파이썬은 `~/sumo-venv` 를 씁니다.
+`run_new.sh`, `scripts/N_rl.sh`, `scripts/robust_N.sh` 는 저장소 폴더를 기준으로 움직이므로 받은 위치와 상관없이 실행됩니다 (파이썬은 `~/sumo-venv`). `scripts/collect_final_N.sh` 는 팀 장비 간 전송(SSH)까지 포함한 일괄 실행용이라, 개인 PC 에서 데이터를 모을 때는 5장 Data Collection 의 `collect_pomdp_data.py` 명령을 쓰세요.
