@@ -3,7 +3,7 @@
 # 사용: setsid nohup bash results/N_rl.sh <시작모델.pt> [run이름=rl_C] [총스텝=6000000] > results/rl_N.log 2>&1 &
 set -u
 INIT=$1; RUN=${2:-rl_N}; TOT=${3:-6000000}
-cd ~/Artificial-Intelligence-and-Control-for-Autonomous-Driving_new_20261118
+cd "$(dirname "$(readlink -f "$0")")/.."   # 저장소 맨 위 폴더
 export BC_MAX_STEPS=${BC_MAX_STEPS:-8000000}  # 11-23 RL은 워커와 같이 돌아 RAM 한계 → 800만
 export SUMO_HOME=~/sumo-venv/lib/python3.10/site-packages/sumo PATH=~/sumo-venv/bin:$PATH OMP_NUM_THREADS=1 SUMO_LIBSUMO=1
 python train.py --run-name $RUN --init $INIT --total-timesteps $TOT \

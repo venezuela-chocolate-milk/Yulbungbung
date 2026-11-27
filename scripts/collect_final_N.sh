@@ -2,8 +2,8 @@
 # 11-26 최종 데이터 1000만 행: 최종 모델 E200k (rl_NE/model_200704.pt, sha256 90be09f4...), 강사 데이터 안 섞음
 # 4 묶음 × 700판 (판당 약 3,600행 → 약 1,008만 행), 작업자 20, seed 1000000*p (평가 seed 와 겹치지 않음)
 # 끝나면 묶음별 data_check + sha256 → 5070ti 전송(sha 확인) → 데스크탑 강건성 seed 500000
-cd ~/Artificial-Intelligence-and-Control-for-Autonomous-Driving_new_20261118
-PY=~/sumo-venv/bin/python; M=results/rl_NE/model_200704.pt; L=results/track_N.log; D=data/final_N
+cd "$(dirname "$(readlink -f "$0")")/.."   # 저장소 맨 위 폴더
+PY=~/sumo-venv/bin/python; M=models/final_rl/model.pt; L=results/track_N.log; D=data/final_N
 P(){ echo "[$(date '+%m-%d %H:%M')] $*" >> $L; }
 [ "$(sha256sum $M | cut -c1-16)" = 90be09f4626c1e28 ] || { P "⑨ 모델 sha 다름 — 중단"; exit 1; }
 for p in 1 2 3 4; do
