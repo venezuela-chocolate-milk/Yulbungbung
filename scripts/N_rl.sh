@@ -1,6 +1,6 @@
 #!/bin/bash
 # 11-25 새 환경 강화학습 (C_rl.sh 와 같은 설정, 데이터만 mom_N). 원래: 11-22 ⑥ C 강화학습: DAgger 최고 모델에서 시작, BC 손실을 계속 0.5로 붙잡은 채 PPO (예전 rl_mom_r4는 BC 0.5→0.2·lr 1e-5에서 충돌이 6→17%로 흔들림 → 더 보수적으로).
-# 사용: setsid nohup bash results/N_rl.sh <시작모델.pt> [run이름=rl_C] [총스텝=6000000] > results/rl_N.log 2>&1 &
+# 사용: bash scripts/N_rl.sh <시작모델.pt> [run이름=rl_N] [총스텝=6000000]   (최종 모델: LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000)
 set -u
 INIT=$1; RUN=${2:-rl_N}; TOT=${3:-6000000}
 cd "$(dirname "$(readlink -f "$0")")/.."   # 저장소 맨 위 폴더
