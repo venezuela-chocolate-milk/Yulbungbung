@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "IBM Plex Sans
 header{padding:56px 0 8px}
 .team{color:var(--muted);font-weight:500;margin:0}
 h1{font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:clamp(34px,6vw,60px);line-height:1.15;margin:8px 0 14px;letter-spacing:-.01em}
-.lede{max-width:62ch;color:var(--muted);margin:0 0 24px;font-size:17px}
+.lede{max-width:none;color:var(--muted);margin:0 0 24px;font-size:17px;word-break:keep-all}
 .map{width:100%;height:auto;display:block}
 .map .roads path{fill:none;stroke:var(--road);stroke-width:3;stroke-linecap:round}
 .map .route{fill:none;stroke:var(--lane);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:var(--len);stroke-dashoffset:0}
@@ -27,7 +27,7 @@ h1{font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:clamp(34px,
 .legend b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--map-pin,#EABF38);color:#4A380B;font-size:12px;margin-right:6px}
 section{padding:44px 0;border-top:1px solid var(--rule)}
 h2{font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:28px;margin:0 0 16px}
-p{max-width:68ch}
+p{max-width:none;word-break:keep-all;overflow-wrap:break-word}
 video{width:100%;border-radius:6px;background:#000;display:block}
 .tbl{overflow-x:auto}
 table{border-collapse:collapse;width:100%;min-width:520px;font-variant-numeric:tabular-nums}
@@ -62,7 +62,7 @@ a{color:var(--sign)} a:focus-visible{outline:3px solid var(--lane);outline-offse
 footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px solid var(--rule)}
 
 /* 프로젝트 목적 — 기존 분위기 유지, 목표 카드만 정리 */
-#project-objective .objective-copy{max-width:80ch;margin:0 0 14px;line-height:1.85}
+#project-objective .objective-copy{max-width:none;margin:0 0 14px;line-height:1.85}
 #project-objective .goal-heading{font-size:18px;font-weight:700;margin:28px 0 14px}
 #project-objective .goal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 36px;list-style:none;padding:0;margin:0}
 #project-objective .goal-grid li{min-width:0;border-left:4px solid var(--goal-accent);padding:2px 0 2px 14px}
@@ -83,7 +83,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 @media(prefers-reduced-motion:reduce){#project-objective.motion-ready .spark,#project-objective.is-animating .spark{animation:none;background-size:100% 100%}}
 
 /* 구현한 도로 — SUMO 장면 갤러리 */
-#implemented-roads .road-intro{max-width:80ch;margin:0 0 24px;line-height:1.8;word-break:keep-all}
+#implemented-roads .road-intro{max-width:none;margin:0 0 24px;line-height:1.8;word-break:keep-all}
 #implemented-roads .road-heading{font-size:18px;font-weight:700;margin:28px 0 14px}
 #implemented-roads .road-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 16px}
 #implemented-roads figure{margin:0;min-width:0}
@@ -91,6 +91,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 #implemented-roads .road-index{color:var(--muted);font-size:11px;letter-spacing:.045em;font-variant-numeric:tabular-nums;font-weight:400;flex-shrink:0}
 #implemented-roads .road-media{aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid var(--rule);border-radius:3px;background:var(--panel)}
 #implemented-roads .road-media img{display:block;width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
+#implemented-roads .road-comment{margin:7px 0 0;font-size:13px;font-weight:400;line-height:1.5;color:var(--muted);word-break:keep-all;text-align:center}
 #implemented-roads .road-placeholder{font-size:12px;color:var(--muted);letter-spacing:.025em}
 @media(max-width:760px){#implemented-roads .road-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}}
 @media(max-width:340px){#implemented-roads .road-gallery{grid-template-columns:1fr}}
@@ -151,7 +152,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 .run-content{padding:2px 0 20px;border-bottom:1px solid var(--rule);min-width:0}
 .run-steps>li:last-child .run-content{border-bottom:0;padding-bottom:0}
 .run-content h3{font-size:18px;line-height:1.45;margin:0 0 6px;letter-spacing:-.02em}
-.run-content p{margin:0 0 8px;color:var(--muted);font-size:15px;max-width:80ch;word-break:keep-all}
+.run-content p{margin:0 0 8px;color:var(--muted);font-size:15px;max-width:none;word-break:keep-all}
 .run-terminal{border:1px solid var(--rule);background:var(--panel);border-radius:6px;margin:12px 0 0;overflow:hidden}
 .terminal-label{display:block;border-bottom:1px solid var(--rule);color:var(--muted);font-size:12px;padding:7px 14px;font-weight:500}
 .run-terminal pre{margin:0;padding:13px 14px;overflow-x:auto;line-height:1.75;font-size:13px;tab-size:2;color:var(--ink)}
@@ -171,7 +172,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 @media(max-width:520px){.run-steps>li{grid-template-columns:32px minmax(0,1fr);gap:10px}.run-num{width:30px;height:30px;font-size:12px}.run-terminal pre{font-size:12px}.behavior-grid{grid-template-columns:1fr;gap:16px}}
 
 
-#robustness .robustness-summary{line-height:1.8;max-width:80ch}
+#robustness .robustness-summary{line-height:1.8;max-width:none}
 #robustness .robustness-summary strong{font-weight:500;color:var(--ink)}
 #data-code>p:first-of-type{max-width:none;line-height:1.85}
 
@@ -182,7 +183,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 @media(max-width:520px){.header-members{font-size:13px;column-gap:9px;margin-bottom:18px}.header-members .members-label{font-size:12px}}
 
 /* 관측 및 행동 공간 — 기존 녹색 포인트 및 표 디자인 활용 */
-#observation-action .obs-intro{max-width:80ch;line-height:1.8}
+#observation-action .obs-intro{max-width:none;line-height:1.8}
 .obs-kicker{font-size:13px;color:var(--muted);font-weight:500;margin:0 0 3px}
 .obs-total{font-size:clamp(32px,5vw,48px);line-height:1.2;color:var(--goal-accent);font-weight:700;letter-spacing:-.045em}
 .obs-total small{font-size:16px;font-weight:500;letter-spacing:0}
@@ -203,7 +204,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 .obs-figure{margin:0;min-width:0}
 .obs-figure svg{display:block;width:100%;max-width:350px;height:auto;margin:0 auto;color:var(--ink);font-family:inherit}
 .obs-figure figcaption{margin:10px 0 0;font-size:13px;line-height:1.65;color:var(--muted)}
-.obs-range-note{font-size:14px;color:var(--muted);line-height:1.75;max-width:80ch;margin:20px 0 0}
+.obs-range-note{font-size:14px;color:var(--muted);line-height:1.75;max-width:none;margin:20px 0 0}
 .action-heading{margin-top:28px}
 .action-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px}
 .action-unit{border-top:1px solid var(--rule);padding-top:14px;min-width:0}
@@ -231,6 +232,12 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 @media(max-width:520px){.obs-table{font-size:12px}.obs-table th{font-size:12px}.obs-table td,.obs-table th{padding:9px 5px}.obs-table .n{width:36px}.obs-table td:first-child{white-space:normal;word-break:keep-all}.failure-row{grid-template-columns:85px minmax(0,1fr) 35px;gap:8px;font-size:12px}.action-layout{grid-template-columns:1fr}#project-summary .summary-grid{gap:22px 14px}#project-summary .summary-grid li{padding-left:10px}#project-summary .summary-key{font-size:20px}#project-summary .summary-label{font-size:13px}#project-summary .summary-number{font-size:11px}}
 @media(max-width:310px){#project-summary .summary-grid{grid-template-columns:1fr}}
 
+/* 데스크톱에서 요청한 줄 구성 유지, 좁은 화면에서는 자연스럽게 줄바꿈 */
+@media(min-width:1040px){
+  .lede{font-size:14px}
+  #project-objective .objective-copy{font-size:15px}
+  .video-intro{font-size:14px}
+}
 </style></head><body>
 <div class="wrap">
 <header>
@@ -250,7 +257,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <!-- STEP 1: 프로젝트 목적 -->
 <section id="project-objective"><h2>프로젝트 목적</h2>
 <p class="objective-copy">실제 도심 도로를 기반으로 여러 장소를 방문하는 <span class="spark">생활형 자율주행 환경</span>을 구축하고, 다양한 교통 상황에 유연하게 대응할 수 있는 자율주행 AI 모델과 주행 데이터셋을 개발하는 것을 목표로 합니다.</p>
-<p class="objective-copy"><span class="spark">인천광역시 서구 왕길동 일대</span>의 실제 도로를 기반으로 다양한 도로 구조와 교통 상황을 구현했습니다. 특히 진입, 양보, 차로 변경 등 <span class="spark d2">차량 간 상호작용과 순간적인 판단이 중요</span>하며, <span class="spark d3">판단이 엇갈릴 경우 충돌로 이어질 수 있는 상황</span>에 초점을 맞췄습니다.</p>
+<p class="objective-copy"><span class="spark">인천광역시 서구 왕길동 일대</span>의 실제 도로를 기반으로 다양한 도로 구조와 교통 상황을 구현했습니다.<br>특히 진입, 양보, 차로 변경 등 <span class="spark d2">차량 간 상호작용과 순간적인 판단이 중요</span>하며, <span class="spark d3">판단이 엇갈릴 경우 충돌로 이어질 수 있는 상황</span>에 초점을 맞췄습니다.</p>
 <h3 class="goal-heading">핵심 목표</h3>
 <ol class="goal-grid">
 <li><span class="goal-number">01 / ENVIRONMENT</span><strong class="goal-key">5.6 km 완주,<br>5개 방문 지점</strong><span class="goal-label">생활형 자율주행 구현</span></li>
@@ -276,46 +283,54 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
   <svg class="route-car" viewBox="0 0 42 25" aria-hidden="true"><path d="M4 16v-4a3 3 0 0 1 3-3h5l5-6h10l6 6h3a3 3 0 0 1 3 3v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" fill="#76BE88" stroke="#006B3F" stroke-width="1.4" stroke-linejoin="round"/><path d="m15 9 4-4h7l4 4Z" fill="#EAF7ED" stroke="#006B3F" stroke-width=".8"/><circle cx="12" cy="18" r="3.4" fill="#263D32"/><circle cx="31" cy="18" r="3.4" fill="#263D32"/><circle cx="12" cy="18" r="1.2" fill="#DDE7DF"/><circle cx="31" cy="18" r="1.2" fill="#DDE7DF"/><path d="M35 12h3" stroke="#FFF6CE" stroke-width="2" stroke-linecap="round"/></svg>
   </div>
 </div>
-<h3 class="road-heading">차량 행동 및 상호작용</h3>
+<h3 class="road-heading">도로 구조 및 상호작용</h3>
 <div class="road-gallery">
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">01</span>회전교차로</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/roundabout.gif" alt="회전교차로 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">진입 시점 및 양보</p>
 </figure>
 <figure>
-<figcaption><span class="road-index" aria-hidden="true">02</span>T자 교차로</figcaption>
-<div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/t-junction.gif" alt="T자 교차로 SUMO 실행 화면" loading="lazy"></div>
+<figcaption><span class="road-index" aria-hidden="true">02</span>비신호 우회전 구간</figcaption>
+<div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/t-junction.gif" alt="비신호 우회전 구간 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">접근 차량 확인 및 안전 진입</p>
 </figure>
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">03</span>신호 교차로</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/signalized-intersection.gif" alt="신호 교차로 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">신호 준수</p>
 </figure>
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">04</span>다차로 유턴 구간</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/u-turn.gif" alt="다차로 유턴 구간 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">차로 선택</p>
 </figure>
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">05</span>주차장</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/parking.gif" alt="주차장 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">저속 주행 및 정차</p>
 </figure>
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">06</span>어린이보호구역</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/school-zone.gif" alt="어린이보호구역 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">제한속도 준수</p>
 </figure>
 <figure>
 <figcaption><span class="road-index" aria-hidden="true">07</span>불법 주정차 차량</figcaption>
 <div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/illegal-parking.gif" alt="불법 주정차 차량 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">장애 차량 회피</p>
 </figure>
 <figure>
-<figcaption><span class="road-index" aria-hidden="true">08</span>119안전센터</figcaption>
-<div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/fire-station.gif" alt="119안전센터 SUMO 실행 화면" loading="lazy"></div>
+<figcaption><span class="road-index" aria-hidden="true">08</span>119 긴급차량</figcaption>
+<div class="road-media"><span class="road-placeholder">SUMO 주행 화면</span><img src="images/fire-station.gif" alt="119 긴급차량 SUMO 실행 화면" loading="lazy"></div>
+<p class="road-comment">긴급차량 대응</p>
 </figure>
 </div>
 </section>
 
 <section><h2>주행 영상</h2>
 <video controls preload="metadata" playsinline><source src="drive_mom.mp4" type="video/mp4"></video>
-<p class="note">최종 PPO 모델의 전체 주행 영상입니다. 회전교차로 통과, 긴급차량과의 상호작용, 신호 대기, 5개 방문 지점 정차 등 주요 주행 상황을 확인할 수 있습니다. (약 30분 주행을 3분으로 편집, 10배속)</p>
+<p class="note video-intro">최종 PPO 모델의 전체 주행 영상입니다. 회전교차로 통과, 긴급차량과의 상호작용, 신호 대기, 5개 방문 지점 정차 등 주요 주행 상황을 확인할 수 있습니다.<br>(약 30분 주행을 3분으로 편집, 10배속)</p>
 <p class="note video-footnote">※ 긴급차량 출현 조건의 72회 주행 중 선정한 완주 사례 (주차는 환경에서 자동 수행).</p>
 </section>
 
