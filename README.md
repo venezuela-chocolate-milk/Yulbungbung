@@ -93,6 +93,13 @@ Ubuntu 22.04, Python 3.10 기준.
 python3 -m venv ~/sumo-venv
 ~/sumo-venv/bin/pip install -r requirements-sumo-driving.txt
 
+# 최종 모델 주행 보기 (sumo-gui 창이 뜨면 ▶ 를 누름)
+#   고정 시드: 옵션 없이 실행하면 기본 시드 1. 최종 모델이 이 판을 완주하는 것을 확인함 (언제 돌려도 같은 판)
+~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1
+#   랜덤 시드: 실행할 때마다 다른 판 (완주율 약 92%, 일부 판은 충돌·막힘으로 끝날 수 있음). 출력된 시작 시드를 --seed 로 주면 같은 판 재현
+~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed
+~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234
+
 # 최종 모델 평가 (작업자 수는 CPU 에 맞게)
 ~/sumo-venv/bin/python eval_parallel.py models/final_rl/model.pt --episodes 100 --workers 8 --seed 5000
 
