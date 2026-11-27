@@ -1,4 +1,4 @@
-# Yulbungbung — 회전교차로 동네 심부름 자율주행 (BC → DAgger → PPO)
+# 실생활 시나리오 기반 복합 도심 환경 자율주행 (BC → DAgger → PPO)
 
 자율주행 인공지능 및 제어 팀 프로젝트 (팀 율붕붕 / Yulbungbung)
 
