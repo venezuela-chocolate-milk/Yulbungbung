@@ -329,7 +329,7 @@ footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px soli
 <div class="tbl"><table>
 <thead><tr><th>모델</th><th class="n">평가 횟수</th><th class="n">완주율</th><th class="n">충돌률</th></tr></thead>
 <tbody>
-<tr><td>BC (전문가 데이터 기반)</td><td class="n">100회</td><td class="n">21%</td><td class="n">7%</td></tr>
+<tr><td>BC (전문가 데이터 기반)</td><td class="n">500회</td><td class="n">22.2%</td><td class="n">9.8%</td></tr>
 <tr><td>DAgger (최고 성능)</td><td class="n">500회</td><td class="n">89.6%</td><td class="n">3.6%</td></tr>
 <tr class="final"><td>최종 PPO</td><td class="n">500회</td><td class="n">92.4%</td><td class="n">4.6%</td></tr>
 </tbody></table></div>
@@ -359,7 +359,7 @@ cd Yulbungbung</code></pre></div></div></li>
 <div class="detail-block" id="training"><h3 class="detail-title">학습 과정</h3>
 <ol class="training-flow" aria-label="전문가 데이터 수집부터 PPO 강화학습까지의 학습 과정">
 <li><div class="flow-track" aria-hidden="true"><span class="flow-node">01</span></div><h4>전문가 데이터 수집</h4><p>규칙 기반·잡음 추가 전문가<br>각 1,000회 주행</p><span class="flow-metric">약 580만 행 수집</span></li>
-<li><div class="flow-track" aria-hidden="true"><span class="flow-node">02</span></div><h4>모방학습 (BC)</h4><p>전문가 행동 모방<br>미경험 상황 대응 한계</p><span class="flow-metric">완주율 21%</span></li>
+<li><div class="flow-track" aria-hidden="true"><span class="flow-node">02</span></div><h4>모방학습 (BC)</h4><p>전문가 행동 모방<br>미경험 상황 대응 한계</p><span class="flow-metric">완주율 22.2%</span></li>
 <li><div class="flow-track" aria-hidden="true"><span class="flow-node">03</span></div><h4>DAgger</h4><p>직접 주행 및 전문가 행동<br>라벨링 반복</p><span class="flow-metric">완주율 89.6%</span></li>
 <li><div class="flow-track" aria-hidden="true"><span class="flow-node">04</span></div><h4>강화학습 (PPO)</h4><p>DAgger 기반 PPO + 모방 손실<br>별도 시드 평가 후 최종 모델 선정</p><span class="flow-metric">139만 스텝 학습 · 20만 스텝 모델 선택</span></li>
 </ol>
