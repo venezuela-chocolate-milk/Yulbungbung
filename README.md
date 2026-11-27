@@ -2,6 +2,7 @@
 
 자율주행 인공지능 및 제어 팀 프로젝트 (팀 율붕붕 / Yulbungbung)
 
+- GitHub 저장소: https://github.com/venezuela-chocolate-milk/Yulbungbung
 - 프로젝트 페이지: https://venezuela-chocolate-milk.github.io/Yulbungbung/
 - 데이터셋 (Hugging Face): https://huggingface.co/datasets/yulbungbung/Yulbungbung-driving-data
 - 최종 모델: `models/final_rl/model.pt` (PPO, sha256 `90be09f4626c1e28d0194939a82e9085ef2d8294390ea193ce2a4853ab094431`)
@@ -101,7 +102,7 @@ python3 -m venv ~/sumo-venv
 |---|---|
 | `env/sumo_env.py` | Gymnasium 환경. 관측 163차원 (센서 범위 안에 보이는 차만), 행동 [가감속, 차선변경], 보상, 종료 조건 |
 | `env/maps.py` | `make_env("roundabout")` 로 환경 생성 |
-| `env/sumo_roundabout/` | 인천 서구 왕길동 일대 SUMO 지도 (도로, 신호, 교통량, 주차장, 건물) |
+| `env/sumo_roundabout/` | 인천 검단구 왕길동 일대 SUMO 지도 (도로, 신호, 교통량, 주차장, 건물) |
 | `env/mom_route.py`, `env/mom_driving.py` | 엄마의 하루 경로 (5개 방문 지점), 주차장 정차·긴급차 양보·어린이보호구역 판정 |
 | `env/mdp_config.py`, `env/obs_layout.py` | 관측·행동·보상 설정, 관측 벡터 안의 위치 |
 | `env/expert_driver.py` | 규칙 기반 강사 (BC·DAgger 정답 라벨) |
@@ -131,7 +132,8 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 # 최종 모델 주행 보기 (sumo-gui 창이 뜨면 ▶ 를 누름)
 #   고정 시드: 옵션 없이 실행하면 기본 시드 1. 최종 모델이 이 판을 완주하는 것을 확인함 (언제 돌려도 같은 판)
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1
-#   랜덤 시드: 실행할 때마다 다른 판 (완주율 약 92%, 일부 판은 충돌·막힘으로 끝날 수 있음). 출력된 시작 시드를 --seed 로 주면 같은 판 재현
+#   랜덤 시드: 실행할 때마다 다른 판 (평가마다 완주율 89.5~92.4%, 처음 보는 seed 5,000판 기준 90.7%. 일부 판은 충돌·막힘으로 끝날 수 있음)
+#   시드 지정: 출력된 시작 시드를 --seed 로 주면 같은 판 재현
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234
 
