@@ -111,7 +111,7 @@ def main():
     ap.add_argument("--out", default=None, help="결과 JSON 저장 경로")
     ap.add_argument("--ev-mode", choices=["train", "eval", "ev_only"], default="eval",
                     help="긴급차 빈도 (기본 eval = test.py 와 같음)")
-    ap.add_argument("--ev-prob", type=float, default=None, help="강건성: 판마다 긴급차 1대 넣을 확률")
+    ap.add_argument("--ev-prob", type=float, default=None, help="판마다 긴급차 1대 넣을 확률. 기본 평가 환경은 '만날 때까지 투입'(meet_until) 이 켜져 있어 이 값은 효과 없음")
     args = ap.parse_args()
     ROUTES = _routes()
 
