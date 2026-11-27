@@ -92,6 +92,7 @@ SUMO 로 만든 회전교차로가 있는 동네 지도에서, AV 가 약 5.6 km
 Ubuntu 22.04, Python 3.10 기준. 모든 명령은 저장소 맨 위 폴더에서 실행합니다.
 
 ```bash
+# 'No module named venv' / 'ensurepip is not available' 가 나오면 먼저: sudo apt install python3-venv
 python3 -m venv ~/sumo-venv
 ~/sumo-venv/bin/pip install -r requirements-sumo-driving.txt
 ```
@@ -126,7 +127,7 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 
 ⑥ `scripts/N_rl.sh` 는 ③~⑤ 에서 만든 `data/mom_N_*.npz` 를 BC 보조 손실 데이터로 쓰므로 `run_new.sh` 를 먼저 끝내야 합니다. 시작 모델은 최종 실행에 쓴 DAgger d3s0 (`models/dagger_best/model.pt`, GitHub 저장소에 있음) 입니다. 처음부터 다시 돌렸다면 `results/best_N.txt` 에 적힌 DAgger 최고 모델로 시작하면 됩니다 (저희는 후보들을 200판으로 다시 평가해 d3s0 를 골랐습니다). 최종 실행 E 는 다른 PC 에서 모은 DAgger 1라운드 데이터 (`mom_N_dagM_r5.npz`) 도 함께 썼으므로, 처음부터 다시 돌리면 같은 방법이지만 숫자가 똑같이 나오지는 않습니다.
 
-`train_bc.py` 와 `pretrain_ppo_bc.py` (BC), `train.py` (PPO) 를 직접 부를 수도 있습니다. 옵션은 `run_new.sh`, `scripts/N_rl.sh` 안의 명령과 같습니다.
+BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.sh` 안의 명령과 같습니다 (예: `~/sumo-venv/bin/python pretrain_ppo_bc.py --data data/mom_N_expert.npz data/mom_N_dart.npz --hold-target -0.1 --hidden 512 512 512 --seed 0 --out results/bc_N_seed0`). PPO 는 `train.py` 이고 옵션은 `scripts/N_rl.sh` 안의 명령과 같습니다. `train_bc.py` 는 수업 원본 BC 스크립트로 옵션이 달라 (`--hold-target`, `--hidden` 없음) 이 프로젝트 결과에는 쓰지 않았습니다.
 
 ### Evaluation
 
@@ -177,6 +178,7 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 | `run_new.sh` | ③ 강사 수집 → ④ BC → ⑤ DAgger 전체 과정 |
 | `scripts/N_rl.sh` | ⑥ PPO (최종 모델은 `LR=2.5e-6`, 20만 스텝 체크포인트) |
 | `scripts/collect_final_N.sh`, `scripts/robust_N.sh` | 제출 데이터 수집, 강건성 평가 |
+| `tests/` | 지도 형상 검사 (`~/sumo-venv/bin/python -m unittest tests.test_roundabout_geometry`). 지도를 그릴 때 만든 검사라, 이후 지도를 고치면서 기준과 달라진 5개 항목(교차로·주차장 안 짧은 연결 차로의 3.2 m 폭, 남서 T자 확장부 연결점 0.25 mm 어긋남, 점선 2개 길이, 정지선 간격, 이름이 바뀐 T자 교차로)은 '알려진 차이'(expectedFailure)로 표시했습니다. 시뮬레이션 주행에는 영향이 없고 지도는 결과와 같게 그대로 둡니다 |
 | `models/final_rl/`, `models/dagger_best/` | 최종 PPO, 비교용 DAgger 최고 |
 | `project_materials/` | 수업 자료 |
 
