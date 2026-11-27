@@ -124,6 +124,8 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 #   → results/rl_NE/model_*.pt 체크포인트. 평가로 고른 200,704 스텝 체크포인트가 최종 모델 (models/final_rl/model.pt)
 ```
 
+⑥ `scripts/N_rl.sh` 는 ③~⑤ 에서 만든 `data/mom_N_*.npz` 를 BC 보조 손실 데이터로 쓰므로 `run_new.sh` 를 먼저 끝내야 합니다. 시작 모델은 최종 실행에 쓴 DAgger d3s0 (`models/dagger_best/model.pt`, GitHub 저장소에 있음) 입니다. 처음부터 다시 돌렸다면 `results/best_N.txt` 에 적힌 DAgger 최고 모델로 시작하면 됩니다 (저희는 후보들을 200판으로 다시 평가해 d3s0 를 골랐습니다). 최종 실행 E 는 다른 PC 에서 모은 DAgger 1라운드 데이터 (`mom_N_dagM_r5.npz`) 도 함께 썼으므로, 처음부터 다시 돌리면 같은 방법이지만 숫자가 똑같이 나오지는 않습니다.
+
 `train_bc.py` 와 `pretrain_ppo_bc.py` (BC), `train.py` (PPO) 를 직접 부를 수도 있습니다. 옵션은 `run_new.sh`, `scripts/N_rl.sh` 안의 명령과 같습니다.
 
 ### Evaluation
