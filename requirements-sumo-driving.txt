@@ -10,3 +10,4 @@ numpy==2.2.6
 gymnasium==1.4.0
 shapely==2.1.2
 tensorboard==2.21.0
+imageio-ffmpeg==0.8.1   # record_video.py (주행 영상 mp4)
