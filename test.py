@@ -7,12 +7,16 @@
     python test.py results/bc_example/model.pt --algorithm bc --nogui
     python test.py --episodes 100 --nogui                 ← 최종 평가 (엄마 경로, 마스킹 없음)
     python test.py --episodes 100 --nogui --mask          ← 비교용: 안전 마스킹 켜고
+    python test.py models/final_rl/model.pt --route mom --episodes 1                ← 고정 시드 (완주 확인된 판)
+    python test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed  ← 매번 다른 판
+    python test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234    ← 출력된 시드의 판 다시 보기
 
 빨간 차가 ego. 앞차가 느리면 감속하고 앞이 비면 가속하는지 관찰해보자.
 """
 import argparse
 import glob
 import os
+import numpy as np
 import torch
 
 from env.maps import make_env
@@ -26,6 +30,10 @@ from utils.evaluator import evaluate_policy
 from train import HPARAMS, RESULTS_DIR, REWARD, MAP  # ← 보상/맵도 train과 동일 조건
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+
+# 옵션 없이 실행할 때 쓰는 시드: 최종 모델(models/final_rl/model.pt)이 sumo-gui 화면 모드로
+# 엄마 경로 1판을 완주하는 것을 확인한 값. (--random-seed: 매번 무작위, --seed N: 그 판 다시 보기)
+DEFAULT_SEED = 1
 
 
 def find_latest_model() -> str:
@@ -90,7 +98,26 @@ if __name__ == "__main__":
                         help="(회전교차로 맵) 이 경로만 평가. 생략하면 학습 경로를 번갈아 평가")
     parser.add_argument("--ev-only", action="store_true",
                         help="(회전교차로 맵) 긴급차 대응만 평가: 매 에피소드 긴급차 1~2번 (기본은 원래 빈도 50%%·1번)")
+    seed_options = parser.add_mutually_exclusive_group()
+    seed_options.add_argument("--random-seed", action="store_true",
+                              help="매번 무작위 시드로 주행 (출력된 시드를 --seed 로 주면 같은 판을 다시 볼 수 있음)")
+    seed_options.add_argument("--seed", type=int,
+                              help=f"이 시드로 주행 (0 ~ 4294967295). 생략하면 완주가 확인된 기본 시드 {DEFAULT_SEED}")
     args = parser.parse_args()
+
+    if args.seed is not None:
+        if not 0 <= args.seed < 2**32:
+            parser.error("--seed는 0부터 4294967295 사이의 정수여야 합니다.")
+        HPARAMS["seed"] = args.seed
+    elif args.random_seed:
+        import secrets
+        HPARAMS["seed"] = secrets.randbits(32)
+    else:
+        HPARAMS["seed"] = DEFAULT_SEED
+    np.random.seed(HPARAMS["seed"])     # PPO 는 모델을 만들 때 이 값으로 다시 정함, BC 도 같은 시드를 쓰게
+    torch.manual_seed(HPARAMS["seed"])
+    print(f"이번 주행의 시작 시드: {HPARAMS['seed']}")
+
     if args.episodes < 1:
         parser.error("--episodes는 1 이상이어야 합니다.")
 
