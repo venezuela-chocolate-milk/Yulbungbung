@@ -5,6 +5,7 @@
 # 사용: bash run_new.sh [작업자 수=20]   기록: results/track_N.log
 set -u
 cd "$(dirname "$(readlink -f "$0")")"
+mkdir -p data results   # 새로 받은 저장소에는 두 폴더가 없음
 T=N; W=${1:-20}; EVN=${EVN:-100}; WAIT_MAX=${WAIT_MAX:-60}
 PY=${PY:-$HOME/sumo-venv/bin/python}
 export SUMO_HOME=$($PY -c "import sumo,os;print(os.path.dirname(sumo.__file__))") OMP_NUM_THREADS=1
