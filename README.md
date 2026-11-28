@@ -90,11 +90,23 @@ SUMO 로 만든 회전교차로가 있는 동네 지도에서, AV 가 약 5.6 km
 ## 5. 실행 방법 (Environment / Training / Evaluation / Data Collection)
 
 Ubuntu 22.04, Python 3.10 기준. 모든 명령은 저장소 맨 위 폴더에서 실행합니다.
+Windows 는 각 Ubuntu 명령 아래의 PowerShell 명령을 쓰면 됩니다 (학습 스크립트는 WSL 필요).
+
+**Ubuntu**
 
 ```bash
 # 'No module named venv' / 'ensurepip is not available' 가 나오면 먼저: sudo apt install python3-venv
 python3 -m venv ~/sumo-venv
 ~/sumo-venv/bin/pip install -r requirements-sumo-driving.txt
+```
+
+**Windows (PowerShell)**
+
+```powershell
+# Python 3.10, git 이 없으면 먼저: winget install Python.Python.3.10 ; winget install Git.Git
+py -3.10 -m venv "$HOME\sumo-venv"
+$env:PYTHONUTF8 = "1"   # 한국어 Windows 에서 requirements 파일의 한글 주석을 읽기 위해 필요
+& "$HOME\sumo-venv\Scripts\python.exe" -m pip install -r requirements-sumo-driving.txt
 ```
 
 ### Environment
@@ -109,12 +121,23 @@ python3 -m venv ~/sumo-venv
 | `env/expert_driver.py` | 규칙 기반 강사 (BC·DAgger 정답 라벨) |
 | `env/roundabout_*.py` | 지도를 만든 패치들 |
 
+**Ubuntu**
+
 ```bash
 # 지도만 sumo-gui 로 보기 (학습 없이, ▶ 를 누르면 차가 움직임)
 ~/sumo-venv/bin/python view_roundabout.py
 ```
 
+**Windows (PowerShell)**
+
+```powershell
+# 지도만 sumo-gui 로 보기 (학습 없이, ▶ 를 누르면 차가 움직임)
+& "$HOME\sumo-venv\Scripts\python.exe" view_roundabout.py
+```
+
 ### Training
+
+**Ubuntu**
 
 ```bash
 # ③ 강사 1000판 + DART 1000판 수집 → ④ BC (seed 3개) → ⑤ DAgger 라운드 (결과: data/mom_N_*.npz, results/bc_N_*)
@@ -125,11 +148,15 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 #   → results/rl_NE/model_*.pt 체크포인트. 평가로 고른 200,704 스텝 체크포인트가 최종 모델 (models/final_rl/model.pt)
 ```
 
+**Windows**: 학습 스크립트 (`run_new.sh`, `scripts/N_rl.sh`) 는 bash 와 Linux 가상환경 경로를 쓰므로 PowerShell 에서는 실행되지 않습니다. WSL (Ubuntu 22.04) 안에서 위 Ubuntu 명령을 그대로 실행하세요.
+
 ⑥ `scripts/N_rl.sh` 는 ③~⑤ 에서 만든 `data/mom_N_*.npz` 를 BC 보조 손실 데이터로 쓰므로 `run_new.sh` 를 먼저 끝내야 합니다. 시작 모델은 최종 실행에 쓴 DAgger d3s0 (`models/dagger_best/model.pt`, GitHub 저장소에 있음) 입니다. 처음부터 다시 돌렸다면 `results/best_N.txt` 에 적힌 DAgger 최고 모델로 시작하면 됩니다 (저희는 후보들을 200판으로 다시 평가해 d3s0 를 골랐습니다). 최종 실행 E 는 다른 PC 에서 모은 DAgger 1라운드 데이터 (`mom_N_dagM_r5.npz`) 도 함께 썼으므로, 처음부터 다시 돌리면 같은 방법이지만 숫자가 똑같이 나오지는 않습니다.
 
 BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.sh` 안의 명령과 같습니다 (예: `~/sumo-venv/bin/python pretrain_ppo_bc.py --data data/mom_N_expert.npz data/mom_N_dart.npz --hold-target -0.1 --hidden 512 512 512 --seed 0 --out results/bc_N_seed0`). PPO 는 `train.py` 이고 옵션은 `scripts/N_rl.sh` 안의 명령과 같습니다. `train_bc.py` 는 수업 원본 BC 스크립트로 옵션이 달라 (`--hold-target`, `--hidden` 없음) 이 프로젝트 결과에는 쓰지 않았습니다.
 
 ### Evaluation
+
+**Ubuntu**
 
 ```bash
 # 최종 모델 주행 보기 (sumo-gui 창이 뜨면 ▶ 를 누름)
@@ -150,7 +177,29 @@ BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.s
 ~/sumo-venv/bin/python record_video.py --model models/final_rl/model.pt --route mom --fps 20
 ```
 
+**Windows (PowerShell)**
+
+```powershell
+# 최종 모델 주행 보기 (sumo-gui 창이 뜨면 ▶ 를 누름)
+#   고정 시드 (기본 시드 1)
+& "$HOME\sumo-venv\Scripts\python.exe" test.py models/final_rl/model.pt --route mom --episodes 1
+#   랜덤 시드 / 시드 지정
+& "$HOME\sumo-venv\Scripts\python.exe" test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed
+& "$HOME\sumo-venv\Scripts\python.exe" test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234
+
+# 최종 모델 평가 (작업자 수는 CPU 에 맞게)
+& "$HOME\sumo-venv\Scripts\python.exe" eval_parallel.py models/final_rl/model.pt --episodes 100 --workers 8 --seed 5000
+
+# 강건성 평가
+& "$HOME\sumo-venv\Scripts\python.exe" eval_robust.py models/final_rl/model.pt --episodes 1000 --workers 8 --seed 100000 --ev-prob 0.5
+
+# 주행 영상 (sumo-gui 필요)
+& "$HOME\sumo-venv\Scripts\python.exe" record_video.py --model models/final_rl/model.pt --route mom --fps 20
+```
+
 ### Data Collection
+
+**Ubuntu**
 
 ```bash
 # 최종 모델로 주행 데이터 수집 (제출 데이터와 같은 설정; 묶음 p 는 --seed 1000000*p)
@@ -162,6 +211,20 @@ BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.s
 
 # JSONL → 수업 예시와 같은 칼럼의 CSV
 ~/sumo-venv/bin/python export_csv.py data/final_N_rl_part1.jsonl.gz --rows 15
+```
+
+**Windows (PowerShell)**
+
+```powershell
+# 최종 모델로 주행 데이터 수집 (줄 끝의 ` 는 PowerShell 의 줄 이어쓰기)
+& "$HOME\sumo-venv\Scripts\python.exe" collect_pomdp_data.py --policy ppo --model models/final_rl/model.pt `
+  --episodes 700 --workers 8 --seed 1000000 --ev-mode eval --state-radius 60 --name final_N_rl_part1
+
+# 품질 점검
+& "$HOME\sumo-venv\Scripts\python.exe" data_check.py data/final_N_rl_part1.npz
+
+# JSONL → CSV
+& "$HOME\sumo-venv\Scripts\python.exe" export_csv.py data/final_N_rl_part1.jsonl.gz --rows 15
 ```
 
 `scripts/robust_N.sh` 는 강건성 평가 5개 seed 를 한 번에 돌리는 스크립트입니다. `scripts/collect_final_N.sh` 는 최종 데이터 4묶음 수집에 쓴 팀 장비용 일괄 스크립트입니다 (수집 뒤 팀 장비로 SSH 전송까지 함).
