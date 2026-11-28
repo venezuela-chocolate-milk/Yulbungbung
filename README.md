@@ -160,14 +160,14 @@ BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.s
 
 ```bash
 # 최종 모델 주행 보기 (sumo-gui 창이 뜨면 ▶ 를 누름)
-#   고정 시드: 옵션 없이 실행하면 기본 시드 1. 최종 모델이 이 판을 완주하는 것을 확인함 (언제 돌려도 같은 판)
+#   고정 시드: 옵션 없이 실행하면 기본 시드 1. 최종 모델이 이 판을 완주하는 것을 확인함 (대체로 같은 판. 컴퓨터·CPU 스레드 수 등에 따라 판이 달라질 수 있음)
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1
 #   랜덤 시드: 실행할 때마다 다른 판 (평가마다 완주율 89.5~92.4%, 처음 보는 seed 5,000판 기준 90.7%. 일부 판은 충돌·막힘으로 끝날 수 있음)
-#   시드 지정: 출력된 시작 시드를 --seed 로 주면 같은 판 재현
+#   시드 지정: 출력된 시작 시드를 --seed 로 주면 그 판을 다시 봄 (위와 같은 이유로 조금 달라질 수 있음)
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed
 ~/sumo-venv/bin/python test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234
 
-# 최종 모델 평가 (작업자 수는 CPU 에 맞게)
+# 최종 모델 평가 (작업자 수는 CPU 에 맞게. 노트북은 발열에 주의해 1~2개부터)
 ~/sumo-venv/bin/python eval_parallel.py models/final_rl/model.pt --episodes 100 --workers 8 --seed 5000
 
 # 강건성 평가 (판마다 seed 고정, 판마다 긴급차를 만날 때까지 투입. 결과와 같은 명령이며 --ev-prob 0.5 는 이 설정에서 효과 없음)
@@ -187,7 +187,7 @@ BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.s
 & "$HOME\sumo-venv\Scripts\python.exe" test.py models/final_rl/model.pt --route mom --episodes 1 --random-seed
 & "$HOME\sumo-venv\Scripts\python.exe" test.py models/final_rl/model.pt --route mom --episodes 1 --seed 1234
 
-# 최종 모델 평가 (작업자 수는 CPU 에 맞게)
+# 최종 모델 평가 (작업자 수는 CPU 에 맞게. 노트북은 발열에 주의해 1~2개부터)
 & "$HOME\sumo-venv\Scripts\python.exe" eval_parallel.py models/final_rl/model.pt --episodes 100 --workers 8 --seed 5000
 
 # 강건성 평가
