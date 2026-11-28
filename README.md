@@ -152,7 +152,7 @@ LR=2.5e-6 bash scripts/N_rl.sh models/dagger_best/model.pt rl_NE 1600000
 
 ⑥ `scripts/N_rl.sh` 는 ③~⑤ 에서 만든 `data/mom_N_*.npz` 를 BC 보조 손실 데이터로 쓰므로 `run_new.sh` 를 먼저 끝내야 합니다. 시작 모델은 최종 실행에 쓴 DAgger d3s0 (`models/dagger_best/model.pt`, GitHub 저장소에 있음) 입니다. 처음부터 다시 돌렸다면 `results/best_N.txt` 에 적힌 DAgger 최고 모델로 시작하면 됩니다 (저희는 후보들을 200판으로 다시 평가해 d3s0 를 골랐습니다). 최종 실행 E 는 다른 PC 에서 모은 DAgger 1라운드 데이터 (`mom_N_dagM_r5.npz`) 도 함께 썼으므로, 처음부터 다시 돌리면 같은 방법이지만 숫자가 똑같이 나오지는 않습니다.
 
-BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.sh` 안의 명령과 같습니다 (예: `~/sumo-venv/bin/python pretrain_ppo_bc.py --data data/mom_N_expert.npz data/mom_N_dart.npz --hold-target -0.1 --hidden 512 512 512 --seed 0 --out results/bc_N_seed0`). PPO 는 `train.py` 이고 옵션은 `scripts/N_rl.sh` 안의 명령과 같습니다. `train_bc.py` 는 수업 원본 BC 스크립트로 옵션이 달라 (`--hold-target`, `--hidden` 없음) 이 프로젝트 결과에는 쓰지 않았습니다.
+BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.sh` 안의 명령과 같습니다 (예: `~/sumo-venv/bin/python pretrain_ppo_bc.py --data data/mom_N_expert.npz data/mom_N_dart.npz --hold-target -0.1 --hidden 512 512 512 --seed 0 --out results/bc_N_seed0`). PPO 는 `train.py` 이고 옵션은 `scripts/N_rl.sh` 안의 명령과 같습니다. `train_bc.py` 는 수업 원본 BC 스크립트로 옵션이 달라 (`--hold-target`, `--hidden` 없음) 이 프로젝트 결과에는 쓰지 않았습니다. `data/mom_N_*.npz` (강사·DART·DAgger 학습 데이터) 는 `run_new.sh` 가 만드는 중간 파일이라 저장소와 Hugging Face 에 포함하지 않았습니다. Hugging Face 데이터셋은 최종 모델의 주행 데이터입니다.
 
 ### Evaluation
 
@@ -227,7 +227,7 @@ BC 를 직접 돌릴 때는 `pretrain_ppo_bc.py` 를 쓰고 옵션은 `run_new.s
 & "$HOME\sumo-venv\Scripts\python.exe" export_csv.py data/final_N_rl_part1.jsonl.gz --rows 15
 ```
 
-`scripts/robust_N.sh` 는 강건성 평가 5개 seed 를 한 번에 돌리는 스크립트입니다. `scripts/collect_final_N.sh` 는 최종 데이터 4묶음 수집에 쓴 팀 장비용 일괄 스크립트입니다 (수집 뒤 팀 장비로 SSH 전송까지 함).
+`scripts/robust_N.sh` 는 강건성 평가 5개 seed 를 한 번에 돌리는 스크립트입니다. `scripts/collect_final_N.sh` 는 최종 데이터 4묶음 수집에 쓴 팀 장비용 일괄 스크립트입니다 (수집 뒤 팀 장비로 SSH 전송까지 함). 두 스크립트 모두 bash 스크립트라 Windows 에서는 WSL (Ubuntu 22.04) 안에서 실행해야 합니다.
 
 ## 6. 폴더
 
