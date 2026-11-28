@@ -5,6 +5,7 @@ eclipse-sumo==1.27.1
 libsumo==1.27.1
 traci==1.27.1
 sumolib==1.27.1
+sumo-data==1.27.1   # eclipse-sumo 가 받는 데이터 패키지. 고정하지 않으면 새 설치에서 1.28.0 이 깔림
 torch==2.11.0
 numpy==2.2.6
 gymnasium==1.4.0
